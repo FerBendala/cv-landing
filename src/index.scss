@@ -2,9 +2,23 @@ html {
 	scroll-behavior: smooth;
 
 	body {
-		background-color: $color-gray-700;
-		color: $color-gray-100;
+		@include m.container;
+
+		background-color: var(--color-gray-700);
+		color: var(--color-gray-100);
 
 		line-height: 1.6;
+
+		* {
+			box-sizing: border-box;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-tap-highlight-color: transparent;
+
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 }

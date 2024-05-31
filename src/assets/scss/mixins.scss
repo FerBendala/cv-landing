@@ -234,24 +234,14 @@
 }
 
 // Background image
-@mixin background-image(
-	$image: null,
-	$bgg: null,
-	$bc: null,
-	$br: no-repeat,
-	$bs: null,
-	$bp: null,
-	$bbm: null,
-	$bo: null,
-	$ba: null
-) {
+@mixin bg-image($img: null, $bg: null, $bc: null, $br: null, $bs: null, $bp: null, $bm: null, $bo: null, $ba: null) {
 	background: {
-		image: $bgg, url("#{$image}");
+		image: $bg, url("#{$img}");
 		color: $bc;
-		repeat: $br;
+		repeat: $br or no-repeat;
 		size: $bs;
 		position: $bp;
-		blend-mode: $bbm;
+		blend-mode: $bm;
 		origin: $bo;
 		attachment: $ba;
 	}
