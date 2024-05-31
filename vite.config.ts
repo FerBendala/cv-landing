@@ -9,9 +9,9 @@ export default defineConfig({
 		preprocessorOptions: {
 			scss: {
 				additionalData: `
-					@use "./assets/scss/variables" as *;
-					@use "./assets/scss/functions" as f;
-					@use "./assets/scss/mixins" as m;
+				@use "./assets/scss/functions" as f;
+				@use "./assets/scss/mixins" as m;
+				@use "./assets/scss/variables" as *;
 					@import "./assets/scss/reset";
 				`
 			}

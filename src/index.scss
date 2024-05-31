@@ -2,8 +2,6 @@ html {
 	scroll-behavior: smooth;
 
 	body {
-		@include m.container;
-
 		background-color: var(--color-gray-700);
 		color: var(--color-gray-100);
 
