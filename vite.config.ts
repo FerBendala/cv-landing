@@ -5,10 +5,16 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
-	assetsInclude: ['./src/assets/scss/*.scss'],
 	css: {
-		loaderOptions: {
-			sass: { additionalData: ` @import "@/style/index.scss"; ` }
-		}
-	}
+		preprocessorOptions: {
+			scss: {
+				additionalData: `
+					@import "./assets/scss/reset";
+					@import "./assets/scss/functions";
+					@import "./assets/scss/mixins";
+					@import "./assets/scss/variables";
+				`,
+			},
+		},
+	},
 });

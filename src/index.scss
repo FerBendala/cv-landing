@@ -1,1 +1,10 @@
-@import url("./reset.scss");
+html {
+	scroll-behavior: smooth;
+
+	body {
+		background-color: $color-gray-700;
+		color: $color-gray-100;
+
+		line-height: 1.6;
+	}
+}
