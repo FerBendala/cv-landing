@@ -23,7 +23,8 @@ export default defineConfig({
 			'@functions': dynamicPath('src/assets/scss/functions.scss'),
 			'@variables': dynamicPath('src/assets/scss/variables.scss'),
 			'@fonts': dynamicPath('src/assets/scss/fonts.scss'),
-			'@reset': dynamicPath('src/assets/scss/reset.scss')
+			'@reset': dynamicPath('src/assets/scss/reset.scss'),
+			'@image': dynamicPath('src/assets/images/')
 		}
 	}
 });

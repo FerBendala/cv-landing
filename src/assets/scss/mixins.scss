@@ -248,9 +248,9 @@
 }
 
 // Add arrow to box
-@mixin arrow($arrowPosition: null, $arrowCoordinate: 50%, $arrowBorder: null, $arrowBackground: null, $arrowSize: 8px) {
-	background: $arrowBackground;
-	border: 1px solid $arrowBorder;
+@mixin arrow($ap: null, $ac: 50%, $ab: null, $abg: null, $as: 8px) {
+	background: $abg;
+	border: 1px solid $ab;
 
 	&:after,
 	&:before {
@@ -261,80 +261,80 @@
 		position: absolute;
 		pointer-events: none;
 
-		@if $arrowPosition == "left" {
+		@if $ap == "left" {
 			right: 100%;
-			top: $arrowCoordinate;
-		} @else if $arrowPosition == "top" {
+			top: $ac;
+		} @else if $ap == "top" {
 			bottom: 100%;
-			left: $arrowCoordinate;
-		} @else if $arrowPosition == "right" {
+			left: $ac;
+		} @else if $ap == "right" {
 			left: 100%;
-			top: $arrowCoordinate;
-		} @else if $arrowPosition == "bottom" {
+			top: $ac;
+		} @else if $ap == "bottom" {
 			top: 100%;
-			left: $arrowCoordinate;
+			left: $ac;
 		}
 	}
 
 	&:before {
 		border-color: transparent;
-		border-width: $arrowSize + 1;
+		border-width: $as + 1;
 
-		@if $arrowPosition == "left" {
-			border-right-color: $arrowBorder;
-			margin-top: -($arrowSize + 1);
-		} @else if $arrowPosition == "top" {
-			border-bottom-color: $arrowBorder;
-			margin-left: -($arrowSize + 1);
-		} @else if $arrowPosition == "right" {
-			border-left-color: $arrowBorder;
-			margin-top: -($arrowSize + 1);
-		} @else if $arrowPosition == "bottom" {
-			border-top-color: $arrowBorder;
-			margin-left: -($arrowSize + 1);
+		@if $ap == "left" {
+			border-right-color: $ab;
+			margin-top: -($as + 1);
+		} @else if $ap == "top" {
+			border-bottom-color: $ab;
+			margin-left: -($as + 1);
+		} @else if $ap == "right" {
+			border-left-color: $ab;
+			margin-top: -($as + 1);
+		} @else if $ap == "bottom" {
+			border-top-color: $ab;
+			margin-left: -($as + 1);
 		}
 	}
 
 	&:after {
 		border-color: transparent;
-		border-width: $arrowSize;
+		border-width: $as;
 
-		@if $arrowPosition == "left" {
-			border-right-color: $arrowBackground;
-			margin-top: -$arrowSize;
-		} @else if $arrowPosition == "top" {
-			border-bottom-color: $arrowBackground;
-			margin-left: -$arrowSize;
-		} @else if $arrowPosition == "right" {
-			border-left-color: $arrowBackground;
-			margin-top: -$arrowSize;
-		} @else if $arrowPosition == "bottom" {
-			border-top-color: $arrowBackground;
-			margin-left: -$arrowSize;
+		@if $ap == "left" {
+			border-right-color: $abg;
+			margin-top: -$as;
+		} @else if $ap == "top" {
+			border-bottom-color: $abg;
+			margin-left: -$as;
+		} @else if $ap == "right" {
+			border-left-color: $abg;
+			margin-top: -$as;
+		} @else if $ap == "bottom" {
+			border-top-color: $abg;
+			margin-left: -$as;
 		}
 	}
 }
 
 // Add placeholder to input
-@mixin placeholder($color: null, $opacity: null) {
+@mixin placeholder($c: null, $o: null) {
 	&::-webkit-input-placeholder {
-		color: $color;
-		opacity: $opacity;
+		color: $c;
+		opacity: $o;
 	}
 
 	&::-moz-placeholder {
-		color: $color;
-		opacity: $opacity;
+		color: $c;
+		opacity: $o;
 	}
 
 	&:-ms-input-placeholder {
-		color: $color;
-		opacity: $opacity;
+		color: $c;
+		opacity: $o;
 	}
 
 	&:-moz-placeholder {
-		color: $color;
-		opacity: $opacity;
+		color: $c;
+		opacity: $o;
 	}
 }
 

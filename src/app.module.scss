@@ -1,0 +1,8 @@
+@use "@functions" as f;
+@use "@mixins" as m;
+
+.app {
+	min-height: 100dvh;
+
+	background-color: var(--color-gray-700);
+}

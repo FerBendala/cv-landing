@@ -1,9 +1,12 @@
-import IconLocation from '@/assets/image/svg/icon-location.svg?react';
-import IconMoon from '@/assets/image/svg/icon-moon.svg?react';
-import IconSun from '@/assets/image/svg/icon-sun.svg?react';
-import LogoFerBendala from '@/assets/image/svg/logo-ferbendala-color.svg?react';
+import IconMoon from '@image/svg/icon-moon.svg?react';
+import IconSun from '@image/svg/icon-sun.svg?react';
+import LogoFerBendala from '@image/svg/logo-ferbendala-color.svg?react';
+
 import Button from '@/components/button';
-import useLocation from '@/hooks/useLocation';
+import ButtonIcon from '@/components/button-icon';
+import SelectLang from '@/components/select-language';
+import { useLocation } from '@/hooks/useLocation';
+import { useThemeStore } from '@/stores/theme.store';
 
 import styles from './style.module.scss';
 
@@ -16,6 +19,7 @@ const menuLinks = [
 
 const Menu = () => {
 	const { t } = useLocation('translation', { keyPrefix: 'menu' });
+	const { theme, setTheme } = useThemeStore();
 
 	return (
 		<header className={styles.menu}>
@@ -32,19 +36,22 @@ const Menu = () => {
 								target='_self'
 								className={styles.item__link}
 							>
-								{name}
+								{t(name.toLowerCase())}
 							</a>
 						</li>
 					))}
 
 					{/* Action buttons */}
 					<li className={styles.menu__list__item}>
-						<Button content={<IconLocation />} transparent />
-						<Button
-							content={true ? <IconMoon /> : <IconSun />}
-							transparent
+						<SelectLang />
+						<ButtonIcon
+							icon={theme === 'dark' ? <IconMoon /> : <IconSun />}
+							onClick={() => setTheme(true)}
 						/>
-						<Button content={t('download_cv')} />
+						<Button
+							text={t('download_cv')}
+							onClick={() => console.log(t('download_cv'))}
+						/>
 					</li>
 				</ul>
 			</nav>

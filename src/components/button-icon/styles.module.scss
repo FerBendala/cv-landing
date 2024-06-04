@@ -1,0 +1,23 @@
+@use "@functions" as f;
+@use "@mixins" as m;
+
+.button {
+	@include m.flex($jc: center, $ai: center);
+
+	padding: 0;
+	border: none;
+	border-radius: f.em(8);
+
+	background: transparent;
+	color: var(--color-gray-100);
+
+	font-size: f.em(14);
+	font-weight: 600;
+
+	cursor: pointer;
+	transition: var(--transition);
+
+	&:hover {
+		color: var(--color-pink-100);
+	}
+}

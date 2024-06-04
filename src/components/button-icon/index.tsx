@@ -1,16 +1,18 @@
+import { JSX } from 'react';
+
 import style from './styles.module.scss';
 
 interface ButtonProps {
-	text: string;
+	icon: JSX.Element;
 	onClick?: () => void;
 }
 
-const Button = ({ text, onClick }: ButtonProps) => {
+const ButtonIcon = ({ icon, onClick }: ButtonProps) => {
 	return (
 		<button type='button' className={style.button} onClick={onClick}>
-			{text}
+			{icon}
 		</button>
 	);
 };
 
-export default Button;
+export default ButtonIcon;

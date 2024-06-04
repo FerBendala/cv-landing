@@ -1,0 +1,68 @@
+@use "@functions" as f;
+@use "@mixins" as m;
+
+.dropdown {
+	@include m.position(relative);
+	@include m.flex($jc: center, $ai: center);
+
+	&__list {
+		@include m.position(absolute, $t: calc(100% + f.em(8)));
+		@include m.flex($jc: flex-start, $ai: flex-start, $fd: column);
+
+		height: 0;
+		padding: 0;
+		border: solid f.em(1) var(--color-gray-300);
+		border-radius: f.em(8);
+		opacity: 0;
+
+		background-color: var(--color-gray-800);
+
+		transition: opacity var(--transition);
+		overflow: hidden;
+
+		&__item {
+			width: 100%;
+
+			&:not(:last-child) {
+				border-bottom: solid f.em(1) var(--color-gray-300);
+			}
+
+			.item {
+				&__button {
+					width: 100%;
+					padding: f.em(8) f.em(24);
+					border: none;
+
+					color: var(--color-gray-300);
+					background: linear-gradient(
+						-45deg,
+						var(--color-gray-800) 0%,
+						var(--color-gray-800) 40%,
+						var(--color-pink-100) 56%,
+						var(--color-blue-100) 100%
+					);
+					background-size: 280% auto;
+					background-position: 100% 0;
+
+					font-family: var(--font-primary);
+					font-size: f.em(14);
+					font-weight: 600;
+					text-align: left;
+
+					cursor: pointer;
+					transition: var(--transition--low);
+
+					&:hover {
+						background-position: 0 0;
+						color: var(--color-gray-800);
+					}
+				}
+			}
+		}
+
+		&.visible {
+			height: auto;
+			opacity: 1;
+		}
+	}
+}
