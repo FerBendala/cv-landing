@@ -7,14 +7,16 @@
 	--color-gray-500: #8a90b6;
 	--color-gray-600: #33363f;
 	--color-gray-700: #18191d;
-	--color-gray-800: #101117;
 
+	--color-gray-800: #101117;
 	--color-pink-100: #ff1fb1;
 	--color-blue-100: #79fbff;
 
-	// Media queries
-	--media-sm: (max-width: 576px);
-	--media-md: (max-width: 768px);
-	--media-lg: (max-width: 992px);
-	--media-xl: (max-width: 1281px);
+	--gradient-primary: linear-gradient(-32deg, #ff1fb1 0%, #79fbff 100%);
+
+	// Fonts
+	--font-primary: "Poppins";
+
+	// Transitions
+	--transition: all 0.32s ease;
 }

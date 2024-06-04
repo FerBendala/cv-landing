@@ -19,10 +19,11 @@ export default defineConfig({
 	plugins: [react(), tsconfigPaths(), svgr({ include: '**/*.svg?react' })],
 	resolve: {
 		alias: {
-			'@mixins': dynamicPath('src/assets/scss/mixins'),
-			'@functions': dynamicPath('src/assets/scss/functions'),
-			'@variables': dynamicPath('src/assets/scss/variables'),
-			'@reset': dynamicPath('src/assets/scss/reset')
+			'@mixins': dynamicPath('src/assets/scss/mixins.scss'),
+			'@functions': dynamicPath('src/assets/scss/functions.scss'),
+			'@variables': dynamicPath('src/assets/scss/variables.scss'),
+			'@fonts': dynamicPath('src/assets/scss/fonts.scss'),
+			'@reset': dynamicPath('src/assets/scss/reset.scss')
 		}
 	}
 });

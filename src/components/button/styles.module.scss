@@ -1,4 +1,54 @@
+@use "@functions" as f;
+@use "@mixins" as m;
+
+@property --gradient-pink {
+	syntax: "<color>";
+	initial-value: white;
+	inherits: false;
+}
+
+@property --gradient-blue {
+	syntax: "<color>";
+	initial-value: white;
+	inherits: false;
+}
+
 .button {
+	@include m.flex($jc: center, $ai: center);
+
+	padding: f.em(8) f.em(16);
 	border: none;
-	background-color: var(--color-pink-100);
+	border-radius: f.em(8);
+
+	background: linear-gradient(-16deg, var(--gradient-pink) 32%, var(--gradient-blue) 100%);
+
+	font-family: var(--font-primary);
+	font-size: f.em(14);
+	font-weight: 600;
+
+	cursor: pointer;
+	transition:
+		--gradient-pink 0.32s,
+		--gradient-blue 0.32s;
+
+	// Icon
+	svg path {
+		transition: var(--transition);
+	}
+
+	&--transparent {
+		padding: 0;
+		background: transparent;
+
+		&:hover {
+			svg path {
+				stroke: var(--color-pink-100);
+			}
+		}
+	}
+
+	&:hover {
+		--gradient-pink: var(--color-pink-100);
+		--gradient-blue: var(--color-blue-100);
+	}
 }

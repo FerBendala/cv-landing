@@ -13,6 +13,5 @@
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "always"
-	},
-	"exportall.config.folderListener": ["/app/stores"]
+	}
 }
