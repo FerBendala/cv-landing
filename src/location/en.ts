@@ -8,8 +8,10 @@ const en = {
 			contact: 'Contact'
 		},
 		language_selector: {
+			language_selector: 'Language',
 			english: 'English',
-			spanish: 'Spanish'
+			spanish: 'Spanish',
+			catalan: 'Catalan'
 		}
 	}
 };

@@ -3,13 +3,15 @@ const es = {
 		menu: {
 			download_cv: 'Descargar CV',
 			skills: 'Skills',
-			about: 'Sobre mi',
-			work: 'Trabajos',
+			about: 'Perfil',
+			work: 'Trabajo',
 			contact: 'Contacto'
 		},
 		language_selector: {
+			language_selector: 'Idioma',
 			english: 'Inglés',
-			spanish: 'Español'
+			spanish: 'Español',
+			catalan: 'Catalán'
 		}
 	}
 };

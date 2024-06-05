@@ -4,12 +4,19 @@ import style from './styles.module.scss';
 
 interface ButtonProps {
 	icon: JSX.Element;
+	role?: string;
 	onClick?: () => void;
 }
 
-const ButtonIcon = ({ icon, onClick }: ButtonProps) => {
+const ButtonIcon = ({ icon, role, onClick, ...rest }: ButtonProps) => {
 	return (
-		<button type='button' className={style.button} onClick={onClick}>
+		<button
+			type='button'
+			className={style.button}
+			role={role}
+			onClick={onClick}
+			{...rest}
+		>
 			{icon}
 		</button>
 	);

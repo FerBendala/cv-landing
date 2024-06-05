@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-import { s } from 'node_modules/vite/dist/node/types.d-aGj9QkWt';
+import { useEffect, useRef, useState } from 'react';
 
 import IconLocation from '@image/svg/icon-location.svg?react';
 
@@ -18,40 +16,72 @@ const SelectLang = ({}: SelectLangProps) => {
 		keyPrefix: 'language_selector'
 	});
 
-	const changeLanguage = (language: string) => {
+	const dropdownRef = useRef<HTMLDivElement>(null);
+	const languages = [
+		{ code: 'en', label: t('english') },
+		{ code: 'es', label: t('spanish') },
+		{ code: 'ca', label: t('catalan') }
+	];
+
+	const handleClick = (language: string) => {
 		setLanguage(language);
+		setVisible(false);
 	};
 
+	const handleClickOutside = (event: MouseEvent) => {
+		if (
+			dropdownRef.current &&
+			!dropdownRef.current.contains(event.target as Node)
+		) {
+			setVisible(false);
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, []);
+
 	return (
-		<div className={styles.dropdown}>
+		<nav
+			className={styles.dropdown}
+			ref={dropdownRef}
+			aria-label={t('language_selector')}
+		>
 			<ButtonIcon
 				icon={<IconLocation />}
+				aria-haspopup='listbox'
+				aria-expanded={visible}
+				aria-controls='language-list'
 				onClick={() => setVisible(true)}
 			/>
 			<ul
+				id='language-list'
 				className={[
 					styles['dropdown__list'],
 					visible && styles.visible
 				].join(' ')}
+				role='listbox'
 			>
-				<li className={styles['dropdown__list__item']}>
-					<button
-						onClick={() => changeLanguage('en')}
-						className={styles['item__button']}
+				{languages.map((language) => (
+					<li
+						key={language.code}
+						className={styles['dropdown__list__item']}
+						role='option'
+						aria-selected='false'
 					>
-						{t('english')}
-					</button>
-				</li>
-				<li className={styles['dropdown__list__item']}>
-					<button
-						onClick={() => changeLanguage('es')}
-						className={styles['item__button']}
-					>
-						{t('spanish')}
-					</button>
-				</li>
+						<button
+							onClick={() => handleClick(language.code)}
+							className={styles['item__button']}
+						>
+							{language.label}
+						</button>
+					</li>
+				))}
 			</ul>
-		</div>
+		</nav>
 	);
 };
 
