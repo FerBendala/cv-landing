@@ -11,7 +11,7 @@ interface SelectLangProps {}
 
 const SelectLanguage = ({}: SelectLangProps) => {
 	const { t, setLanguage } = useLocation('translation', {
-		keyPrefix: 'language_selector'
+		keyPrefix: 'components.language_selector'
 	});
 
 	const dropdownRef = useRef<HTMLDivElement>(null);

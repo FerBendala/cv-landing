@@ -18,7 +18,7 @@ const menuLinks = [
 ];
 
 const Menu = () => {
-	const { t } = useLocation('translation', { keyPrefix: 'menu' });
+	const { t } = useLocation('translation', { keyPrefix: 'components.menu' });
 	const { theme, setTheme } = useThemeStore();
 
 	return (

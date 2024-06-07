@@ -1,0 +1,47 @@
+@use "@functions" as f;
+@use "@mixins" as m;
+
+.header {
+	@include m.container();
+	@include m.flex($fd: column, $ai: flex-start, $gap: f.em(32));
+
+	color: var(--color-gray-100);
+
+	&__container {
+		@include m.flex($fd: column, $ai: flex-start, $gap: f.em(16));
+
+		&:not(:first-child) {
+			@include m.flex($gap: f.em(8));
+
+			&:last-child {
+				@include m.flex($fd: row);
+			}
+		}
+	}
+
+	&__title {
+		font-size: f.em(60);
+		font-weight: 600;
+	}
+
+	&__info {
+		@include m.flex($ai: center, $gap: f.em(8));
+	}
+
+	&__link {
+		display: block;
+
+		color: var(--color-gray-100);
+
+		transition: var(--transition);
+
+		&:hover {
+			color: var(--color-pink-100);
+		}
+	}
+
+	svg {
+		width: f.em(24);
+		height: f.em(24);
+	}
+}
