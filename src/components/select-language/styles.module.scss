@@ -6,7 +6,7 @@
 	@include m.flex($jc: center, $ai: center);
 
 	&__list {
-		@include m.position(absolute, $t: calc(100% + f.em(8)));
+		@include m.position(absolute, $t: calc(100% + f.em(16)));
 		@include m.flex($jc: flex-start, $ai: flex-start, $fd: column);
 
 		height: 0;
@@ -18,14 +18,10 @@
 		background-color: var(--color-gray-800);
 
 		transition: opacity var(--transition);
-		overflow: hidden;
 
 		&__item {
 			width: 100%;
-
-			&:not(:last-child) {
-				border-bottom: solid f.em(1) var(--color-gray-300);
-			}
+			overflow: hidden;
 
 			.item {
 				&__button {
@@ -58,11 +54,40 @@
 					}
 				}
 			}
+
+			&:not(:last-child) {
+				border-bottom: solid f.em(1) var(--color-gray-300);
+			}
+
+			&:first-child {
+				border-radius: f.em(7) f.em(7) 0 0;
+			}
+
+			&:last-child {
+				border-radius: 0 0 f.em(7) f.em(7);
+			}
 		}
 
 		&.visible {
 			height: auto;
 			opacity: 1;
+		}
+
+		&::after {
+			@include m.position(absolute, $b: 100%, $l: 50%);
+
+			display: block;
+			width: f.em(16);
+			height: f.em(8);
+			border: solid f.em(1) var(--color-gray-300) {
+				bottom: none;
+			}
+			border-radius: f.em(12) f.em(12) 0 0;
+
+			background-color: var(--color-gray-800);
+
+			content: "";
+			transform: translateX(-50%);
 		}
 	}
 }

@@ -2,17 +2,16 @@ import style from './styles.module.scss';
 
 interface ButtonProps {
 	text: string;
-	role?: string;
 	onClick?: () => void;
 }
 
-const Button = ({ text, role, onClick }: ButtonProps) => {
+const Button = ({ text, onClick, ...data }: ButtonProps) => {
 	return (
 		<button
 			type='button'
 			className={style.button}
-			role={role}
 			onClick={onClick}
+			{...data}
 		>
 			{text}
 		</button>

@@ -4,7 +4,7 @@ import LogoFerBendala from '@image/svg/logo-ferbendala-color.svg?react';
 
 import Button from '@/components/button';
 import ButtonIcon from '@/components/button-icon';
-import SelectLang from '@/components/select-language';
+import SelectLanguage from '@/components/select-language';
 import { useLocation } from '@/hooks/useLocation';
 import { useThemeStore } from '@/stores/theme.store';
 
@@ -23,10 +23,18 @@ const Menu = () => {
 
 	return (
 		<header className={styles.menu}>
-			<nav className={styles.menu__container}>
-				<a href='#' target='_self' className={styles.menu__logo}>
+			<nav
+				className={styles.menu__container}
+				aria-label={t('main_navigation')}
+			>
+				<a
+					href='#'
+					className={styles.menu__logo}
+					aria-label={t('homepage')}
+				>
 					<LogoFerBendala />
 				</a>
+
 				<ul className={styles.menu__list}>
 					{/* Page links */}
 					{menuLinks.map(({ name, url }) => (
@@ -43,10 +51,15 @@ const Menu = () => {
 
 					{/* Action buttons */}
 					<li className={styles.menu__list__item}>
-						<SelectLang />
+						<SelectLanguage />
 						<ButtonIcon
 							icon={theme === 'dark' ? <IconMoon /> : <IconSun />}
 							onClick={() => setTheme(true)}
+							aria-label={
+								theme === 'dark'
+									? t('switch_to_light_theme')
+									: t('switch_to_dark_theme')
+							}
 						/>
 						<Button
 							text={t('download_cv')}

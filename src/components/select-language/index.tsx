@@ -9,9 +9,7 @@ import styles from './styles.module.scss';
 
 interface SelectLangProps {}
 
-const SelectLang = ({}: SelectLangProps) => {
-	const [visible, setVisible] = useState(false);
-
+const SelectLanguage = ({}: SelectLangProps) => {
 	const { t, setLanguage } = useLocation('translation', {
 		keyPrefix: 'language_selector'
 	});
@@ -22,6 +20,8 @@ const SelectLang = ({}: SelectLangProps) => {
 		{ code: 'es', label: t('spanish') },
 		{ code: 'ca', label: t('catalan') }
 	];
+
+	const [visible, setVisible] = useState(false);
 
 	const handleClick = (language: string) => {
 		setLanguage(language);
@@ -85,4 +85,4 @@ const SelectLang = ({}: SelectLangProps) => {
 	);
 };
 
-export default SelectLang;
+export default SelectLanguage;
