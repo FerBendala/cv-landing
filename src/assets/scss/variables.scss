@@ -1,36 +1,41 @@
+@use "@mixins" as m;
+
+$dark-theme-colors: (
+	gray-100: #fafaff,
+	gray-200: #f4f5fe,
+	gray-300: #e6e8fd,
+	gray-400: #b6bde9,
+	gray-500: #8a90b6,
+	gray-600: #33363f,
+	gray-700: #18191d,
+	gray-800: #101117,
+	pink-100: #ff1fb1,
+	blue-100: #79fbff
+);
+
+$light-theme-colors: (
+	gray-100: #18191d,
+	gray-200: #101117,
+	gray-300: #33363f,
+	gray-400: #8a90b6,
+	gray-500: #b6bde9,
+	gray-600: #e6e8fd,
+	gray-700: #f4f5fe,
+	gray-800: #fafaff,
+	pink-100: #ff1fb1,
+	blue-100: #79fbff
+);
+
 :root {
-	/* Colors */
-	--color-gray-100: #fafaff;
-	--color-gray-200: #f4f5fe;
-	--color-gray-300: #e6e8fd;
-	--color-gray-400: #b6bde9;
-	--color-gray-500: #8a90b6;
-	--color-gray-600: #33363f;
-	--color-gray-700: #18191d;
-	--color-gray-800: #101117;
-
-	--color-pink-100: #ff1fb1;
-	--color-blue-100: #79fbff;
-
-	/* Fonts */
 	--font-primary: "Poppins";
-
-	/* Transitions */
 	--transition: 0.32s ease;
-	--transition--low: 0.48s ease;
-}
+	--transition-low: 0.48s ease;
 
-// Theme light
-.light {
-	--color-gray-100: #18191d;
-	--color-gray-200: #101117;
-	--color-gray-300: #33363f;
-	--color-gray-400: #8a90b6;
-	--color-gray-500: #b6bde9;
-	--color-gray-600: #e6e8fd;
-	--color-gray-700: #f4f5fe;
-	--color-gray-800: #fafaff;
+	.dark {
+		@include m.set-colors($dark-theme-colors);
+	}
 
-	--color-pink-100: #ff1fb1;
-	--color-blue-100: #79fbff;
+	.ligth {
+		@include m.set-colors($light-theme-colors);
+	}
 }

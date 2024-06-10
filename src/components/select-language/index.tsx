@@ -52,6 +52,7 @@ const SelectLanguage = ({}: SelectLangProps) => {
 		>
 			<ButtonIcon
 				icon={<IconLocation />}
+				aria-label={t('change_language')}
 				aria-haspopup='listbox'
 				aria-expanded={visible}
 				aria-controls='language-list'

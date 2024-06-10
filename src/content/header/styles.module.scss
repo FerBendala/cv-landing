@@ -3,25 +3,41 @@
 
 .header {
 	@include m.container();
-	@include m.flex($fd: column, $ai: flex-start, $gap: f.em(32));
+	@include m.grid($ga: "description image" "location image" "links image", $gap: f.em(32) f.em(40));
+
+	padding: f.em(112) 0 f.em(88);
 
 	color: var(--color-gray-100);
 
+	@include m.media(tablet) {
+		@include m.grid($ga: "description" "image" "location" "links", $gap: f.em(24));
+	}
+
 	&__container {
-		@include m.flex($fd: column, $ai: flex-start, $gap: f.em(16));
+		&--description {
+			@include m.grid-child($ga: description);
+			@include m.flex($fd: column, $ai: flex-start, $gap: f.em(16));
+		}
 
-		&:not(:first-child) {
-			@include m.flex($gap: f.em(8));
+		&--location {
+			@include m.grid-child($ga: location);
+			@include m.flex($fd: column, $ai: flex-start, $gap: f.em(8));
+		}
 
-			&:last-child {
-				@include m.flex($fd: row);
-			}
+		&--links {
+			@include m.grid-child($ga: links);
+			@include m.flex($fd: row, $ai: flex-start, $gap: f.em(8));
+		}
+
+		&--image {
+			@include m.grid-child($ga: image);
 		}
 	}
 
 	&__title {
 		font-size: f.em(60);
 		font-weight: 600;
+		line-height: 1.12;
 	}
 
 	&__info {

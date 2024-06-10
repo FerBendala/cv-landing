@@ -1,5 +1,9 @@
 const en = {
 	translation: {
+		meta: {
+			title: 'Fernando Bendala',
+			description: 'Personal website of Fernando Bendala'
+		},
 		components: {
 			menu: {
 				download_cv: 'Download CV',
@@ -14,6 +18,7 @@ const en = {
 			},
 			language_selector: {
 				language_selector: 'Language',
+				change_language: 'Change language',
 				english: 'English',
 				spanish: 'Spanish',
 				catalan: 'Catalan'

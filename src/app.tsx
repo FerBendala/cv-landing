@@ -1,3 +1,4 @@
+import Head from '@/components/head/head';
 import Menu from '@/components/menu';
 import Header from '@/content/header';
 import { useThemeStore } from '@/stores/theme.store';
@@ -9,6 +10,7 @@ const App = () => {
 
 	return (
 		<div className={[styles.app, theme].join(' ')}>
+			<Head />
 			<Menu />
 			<Header />
 		</div>

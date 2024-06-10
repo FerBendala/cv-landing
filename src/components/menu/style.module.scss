@@ -61,4 +61,8 @@
 			}
 		}
 	}
+
+	@include m.media(tablet) {
+		display: none;
+	}
 }

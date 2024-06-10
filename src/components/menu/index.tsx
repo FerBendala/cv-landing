@@ -22,8 +22,8 @@ const Menu = () => {
 	const { theme, setTheme } = useThemeStore();
 
 	return (
-		<header className={styles.menu}>
-			<nav
+		<nav className={styles.menu}>
+			<div
 				className={styles.menu__container}
 				aria-label={t('main_navigation')}
 			>
@@ -64,11 +64,12 @@ const Menu = () => {
 						<Button
 							text={t('download_cv')}
 							onClick={() => console.log(t('download_cv'))}
+							aria-label={t('download_cv')}
 						/>
 					</li>
 				</ul>
-			</nav>
-		</header>
+			</div>
+		</nav>
 	);
 };
 
