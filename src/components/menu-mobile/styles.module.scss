@@ -3,7 +3,7 @@
 
 .menu {
 	&__screen {
-		@include m.position(absolute, $t: 0, $r: 0, $b: 0, $l: 0);
+		@include m.position(fixed, $t: 0, $r: 0, $b: 0, $l: 0);
 
 		max-width: 0;
 
@@ -66,6 +66,8 @@
 				&__list {
 					@include m.flex($fd: column, $ai: flex-start, $gap: f.em(24));
 					&__item {
+						width: 100%;
+
 						.item__link {
 							color: var(--color-gray-100);
 
@@ -86,6 +88,8 @@
 				opacity: 0;
 
 				background: var(--color-gray-100);
+
+				transition: var(--transition-low);
 			}
 		}
 

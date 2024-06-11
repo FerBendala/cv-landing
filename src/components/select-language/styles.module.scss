@@ -17,7 +17,11 @@
 
 		background-color: var(--color-gray-800);
 
-		transition: opacity var(--transition);
+		transition:
+			visibility var(--transition),
+			opacity var(--transition),
+			margin-top var(--transition-low),
+			max-height var(--transition-low);
 
 		visibility: hidden;
 
@@ -108,23 +112,23 @@
 	}
 
 	@include m.media(tablet) {
-		@include m.flex($fd: column, $ai: flex-start, $gap: f.em(16));
+		@include m.flex($fd: column, $ai: flex-start);
 
 		&__list {
-			@include m.flex($gap: f.em(16));
 			@include m.position(static, $t: calc(100% + f.em(32)));
 
 			width: 100%;
-			border: none;
+
+			border-color: var(--color-gray-600);
 
 			&__item {
 				&:not(:last-child) {
-					border: none;
+					border-color: var(--color-gray-600);
 				}
 
 				.item {
 					&__button {
-						padding: 0;
+						padding: f.em(16) f.em(20);
 
 						transition: none;
 
@@ -138,6 +142,10 @@
 
 			&:before {
 				content: none;
+			}
+
+			&.visible {
+				margin-top: f.em(16);
 			}
 		}
 	}

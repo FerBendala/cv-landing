@@ -24,9 +24,8 @@ const SelectLanguage = ({}: SelectLangProps) => {
 		{ code: 'ca', label: t('catalan'), flag: FlagCat }
 	];
 
-	console.log(languages);
-
 	const [visible, setVisible] = useState(false);
+	const random = Math.floor(Math.random() * languages.length);
 
 	const handleClick = (language: string) => {
 		setLanguage(language);
@@ -60,12 +59,12 @@ const SelectLanguage = ({}: SelectLangProps) => {
 				aria-label={t('change_language')}
 				aria-haspopup='listbox'
 				aria-expanded={visible}
-				aria-controls='language-list'
-				onClick={() => setVisible(true)}
+				aria-controls={`language-list-${random}`}
+				onClick={() => setVisible((prev) => !prev)}
 				text={t('change_language')}
 			/>
 			<ul
-				id='language-list'
+				id={`language-list-${random}`}
 				className={[
 					styles['dropdown__list'],
 					visible && styles.visible

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import IconMenu from '@image/svg/icon-burger.svg?react';
 import IconCancel from '@image/svg/icon-cancel.svg?react';
@@ -21,6 +21,11 @@ const MenuMobile = () => {
 
 	const [visible, setVisible] = useState(false);
 
+	useEffect(() => {
+		if (visible) document.body.style.overflow = 'hidden';
+		else document.body.style.overflow = '';
+	}, [visible]);
+
 	const themeButtonText =
 		theme === 'dark'
 			? t('switch_to_light_theme')
@@ -33,11 +38,11 @@ const MenuMobile = () => {
 				aria-label={t('change_language')}
 				aria-haspopup='listbox'
 				aria-expanded={visible}
-				aria-controls='language-list'
+				aria-controls='menu-list'
 				onClick={() => setVisible(true)}
 			/>
 			<ul
-				id='language-list'
+				id='menu-list'
 				className={[
 					styles.menu__screen,
 					visible && styles.visible
@@ -52,7 +57,7 @@ const MenuMobile = () => {
 						aria-label={t('change_language')}
 						aria-haspopup='listbox'
 						aria-expanded={visible}
-						aria-controls='language-list'
+						aria-controls='menu-list'
 						onClick={() => setVisible(false)}
 					/>
 				</li>

@@ -2,11 +2,17 @@
 @use "@mixins" as m;
 
 .menu {
+	@include m.position(sticky, $t: 0);
+
 	background-color: var(--color-gray-800);
 
-	@include m.media(tablet) {
-		background-color: transparent;
-		padding: f.em(16) 0;
+	&::after {
+		@include m.position(absolute, $i: 0);
+
+		backdrop-filter: blur(16px);
+
+		content: "";
+		z-index: -1;
 	}
 
 	&__container {
@@ -69,5 +75,10 @@
 		@include m.media(tablet) {
 			display: none;
 		}
+	}
+
+	@include m.media(tablet) {
+		background-color: transparent;
+		padding: f.em(16) 0;
 	}
 }

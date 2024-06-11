@@ -23,7 +23,8 @@
 		}
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: var(--color-pink-100);
 	}
 }

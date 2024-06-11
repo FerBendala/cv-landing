@@ -225,12 +225,13 @@
 }
 
 // Position
-@mixin position($position, $t: null, $r: null, $b: null, $l: null) {
+@mixin position($position, $t: null, $r: null, $b: null, $l: null, $i: null) {
 	position: $position;
 	top: $t;
 	right: $r;
 	bottom: $b;
 	left: $l;
+	inset: $i;
 }
 
 // Background image

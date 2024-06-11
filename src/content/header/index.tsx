@@ -70,8 +70,6 @@ const Header = () => {
 			</section>
 
 			<picture className={styles['header__container--image']}>
-				<source srcSet={photoNextGen} />
-				<source srcSet={photoPastGen} />
 				<img
 					src={photoNextGen}
 					alt='Fernando Bendala'

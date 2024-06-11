@@ -31,9 +31,9 @@ $light-theme-colors: (
 	--transition: 0.32s ease;
 	--transition-low: 0.48s ease;
 
-	@include m.set-colors($light-theme-colors);
+	@include m.set-colors($dark-theme-colors);
 
-	.dark {
-		@include m.set-colors($dark-theme-colors);
+	.light {
+		@include m.set-colors($light-theme-colors);
 	}
 }

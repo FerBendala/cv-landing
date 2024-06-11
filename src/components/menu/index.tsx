@@ -1,3 +1,5 @@
+import MediaQuery from 'react-responsive';
+
 import IconMoon from '@image/svg/icon-moon.svg?react';
 import IconSun from '@image/svg/icon-sun.svg?react';
 import LogoFerBendala from '@image/svg/logo-ferbendala-color.svg?react';
@@ -30,41 +32,50 @@ const Menu = () => {
 					<LogoFerBendala />
 				</a>
 
-				<ul className={styles.menu__list}>
-					{/* Page links */}
-					{customLinks.map(({ name, url }) => (
-						<li key={name} className={styles.menu__list__item}>
-							<a
-								href={url}
-								target='_self'
-								className={styles.item__link}
-							>
-								{t(name.toLowerCase())}
-							</a>
+				<MediaQuery minWidth={768}>
+					<ul className={styles.menu__list}>
+						{/* Page links */}
+						{customLinks.map(({ name, url }) => (
+							<li key={name} className={styles.menu__list__item}>
+								<a
+									href={url}
+									target='_self'
+									className={styles.item__link}
+								>
+									{t(name.toLowerCase())}
+								</a>
+							</li>
+						))}
+
+						{/* Action buttons */}
+						<li className={styles.menu__list__item}>
+							<SelectLanguage />
+							<ButtonIcon
+								icon={
+									theme === 'dark' ? (
+										<IconMoon />
+									) : (
+										<IconSun />
+									)
+								}
+								onClick={() => setTheme(true)}
+								aria-label={
+									theme === 'dark'
+										? t('switch_to_light_theme')
+										: t('switch_to_dark_theme')
+								}
+							/>
+							<Button
+								text={t('download_cv')}
+								onClick={() => console.log(t('download_cv'))}
+								aria-label={t('download_cv')}
+							/>
 						</li>
-					))}
-
-					{/* Action buttons */}
-					<li className={styles.menu__list__item}>
-						<SelectLanguage />
-						<ButtonIcon
-							icon={theme === 'dark' ? <IconMoon /> : <IconSun />}
-							onClick={() => setTheme(true)}
-							aria-label={
-								theme === 'dark'
-									? t('switch_to_light_theme')
-									: t('switch_to_dark_theme')
-							}
-						/>
-						<Button
-							text={t('download_cv')}
-							onClick={() => console.log(t('download_cv'))}
-							aria-label={t('download_cv')}
-						/>
-					</li>
-				</ul>
-
-				<MenuMobile />
+					</ul>
+				</MediaQuery>
+				<MediaQuery maxWidth={767}>
+					<MenuMobile />
+				</MediaQuery>
 			</div>
 		</nav>
 	);
