@@ -10,7 +10,11 @@
 	color: var(--color-gray-100);
 
 	@include m.media(tablet) {
+		padding: f.em(72) 0;
 		@include m.grid($ga: "description" "image" "location" "links", $gap: f.em(24));
+	}
+	@include m.media(phone) {
+		padding: f.em(72) f.em(32);
 	}
 
 	&__container {
@@ -59,5 +63,12 @@
 	svg {
 		width: f.em(24);
 		height: f.em(24);
+	}
+
+	img {
+		@include m.media(tablet) {
+			width: 100%;
+			height: auto;
+		}
 	}
 }

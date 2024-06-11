@@ -4,10 +4,11 @@ import style from './styles.module.scss';
 
 interface ButtonProps {
 	icon: JSX.Element;
+	text?: string;
 	onClick?: () => void;
 }
 
-const ButtonIcon = ({ icon, onClick, ...data }: ButtonProps) => {
+const ButtonIcon = ({ icon, text, onClick, ...data }: ButtonProps) => {
 	return (
 		<button
 			type='button'
@@ -16,6 +17,7 @@ const ButtonIcon = ({ icon, onClick, ...data }: ButtonProps) => {
 			{...data}
 		>
 			{icon}
+			{text && <span>{text}</span>}
 		</button>
 	);
 };

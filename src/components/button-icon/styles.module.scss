@@ -2,7 +2,7 @@
 @use "@mixins" as m;
 
 .button {
-	@include m.flex($jc: center, $ai: center);
+	@include m.flex($jc: center, $ai: center, $gap: f.em(16));
 
 	padding: 0;
 	border: none;
@@ -11,11 +11,17 @@
 	background: transparent;
 	color: var(--color-gray-100);
 
-	font-size: f.em(14);
-	font-weight: 600;
+	font-family: var(--font-primary);
+	font-size: f.em(16);
 
 	cursor: pointer;
 	transition: var(--transition);
+
+	span {
+		@include m.media(md) {
+			display: none;
+		}
+	}
 
 	&:hover {
 		color: var(--color-pink-100);

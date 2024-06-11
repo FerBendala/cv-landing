@@ -4,6 +4,11 @@
 .menu {
 	background-color: var(--color-gray-800);
 
+	@include m.media(tablet) {
+		background-color: transparent;
+		padding: f.em(16) 0;
+	}
+
 	&__container {
 		@include m.container();
 		@include m.flex($jc: space-between, $ai: center);
@@ -60,9 +65,9 @@
 				}
 			}
 		}
-	}
 
-	@include m.media(tablet) {
-		display: none;
+		@include m.media(tablet) {
+			display: none;
+		}
 	}
 }

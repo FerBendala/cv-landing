@@ -4,18 +4,13 @@ import LogoFerBendala from '@image/svg/logo-ferbendala-color.svg?react';
 
 import Button from '@/components/button';
 import ButtonIcon from '@/components/button-icon';
+import MenuMobile from '@/components/menu-mobile';
 import SelectLanguage from '@/components/select-language';
+import customLinks from '@/content/links';
 import { useLocation } from '@/hooks/useLocation';
 import { useThemeStore } from '@/stores/theme.store';
 
 import styles from './style.module.scss';
-
-const menuLinks = [
-	{ name: 'Skills', url: '#' },
-	{ name: 'About', url: '#' },
-	{ name: 'Work', url: '#' },
-	{ name: 'Contact', url: '#' }
-];
 
 const Menu = () => {
 	const { t } = useLocation('translation', { keyPrefix: 'components.menu' });
@@ -37,7 +32,7 @@ const Menu = () => {
 
 				<ul className={styles.menu__list}>
 					{/* Page links */}
-					{menuLinks.map(({ name, url }) => (
+					{customLinks.map(({ name, url }) => (
 						<li key={name} className={styles.menu__list__item}>
 							<a
 								href={url}
@@ -68,6 +63,8 @@ const Menu = () => {
 						/>
 					</li>
 				</ul>
+
+				<MenuMobile />
 			</div>
 		</nav>
 	);

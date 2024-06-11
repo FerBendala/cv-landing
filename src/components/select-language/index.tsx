@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
+import FlagCat from '@image/svg/flag-cat.svg';
+import FlagSpa from '@image/svg/flag-spa.svg';
+import FlagUsa from '@image/svg/flag-usa.svg';
 import IconLocation from '@image/svg/icon-location.svg?react';
 
 import ButtonIcon from '@/components/button-icon';
@@ -16,10 +19,12 @@ const SelectLanguage = ({}: SelectLangProps) => {
 
 	const dropdownRef = useRef<HTMLDivElement>(null);
 	const languages = [
-		{ code: 'en', label: t('english') },
-		{ code: 'es', label: t('spanish') },
-		{ code: 'ca', label: t('catalan') }
+		{ code: 'en', label: t('english'), flag: FlagUsa },
+		{ code: 'es', label: t('spanish'), flag: FlagSpa },
+		{ code: 'ca', label: t('catalan'), flag: FlagCat }
 	];
+
+	console.log(languages);
 
 	const [visible, setVisible] = useState(false);
 
@@ -57,6 +62,7 @@ const SelectLanguage = ({}: SelectLangProps) => {
 				aria-expanded={visible}
 				aria-controls='language-list'
 				onClick={() => setVisible(true)}
+				text={t('change_language')}
 			/>
 			<ul
 				id='language-list'
@@ -66,18 +72,19 @@ const SelectLanguage = ({}: SelectLangProps) => {
 				].join(' ')}
 				role='listbox'
 			>
-				{languages.map((language) => (
+				{languages.map(({ label, code, flag }) => (
 					<li
-						key={language.code}
+						key={code}
 						className={styles['dropdown__list__item']}
 						role='option'
 						aria-selected='false'
 					>
 						<button
-							onClick={() => handleClick(language.code)}
+							onClick={() => handleClick(code)}
 							className={styles['item__button']}
 						>
-							{language.label}
+							<img src={flag} alt={label} />
+							{label}
 						</button>
 					</li>
 				))}

@@ -27,6 +27,7 @@
 
 			.item {
 				&__button {
+					@include m.flex($jc: flex-start, $ai: center, $gap: f.em(16));
 					width: 100%;
 					padding: f.em(8) f.em(24);
 					border: none;
@@ -48,7 +49,17 @@
 					text-align: left;
 
 					cursor: pointer;
-					transition: var(--transition--low);
+					transition: var(--transition-low);
+
+					img {
+						width: f.em(24);
+						height: f.em(24);
+						border-radius: f.em(24);
+
+						@include m.media(md) {
+							display: none;
+						}
+					}
 
 					&:hover {
 						background-position: 0 0;
@@ -93,6 +104,41 @@
 
 			content: "";
 			transform: translateX(-50%);
+		}
+	}
+
+	@include m.media(tablet) {
+		@include m.flex($fd: column, $ai: flex-start, $gap: f.em(16));
+
+		&__list {
+			@include m.flex($gap: f.em(16));
+			@include m.position(static, $t: calc(100% + f.em(32)));
+
+			width: 100%;
+			border: none;
+
+			&__item {
+				&:not(:last-child) {
+					border: none;
+				}
+
+				.item {
+					&__button {
+						padding: 0;
+
+						transition: none;
+
+						&:hover {
+							color: var(--color-gray-100);
+							background: transparent;
+						}
+					}
+				}
+			}
+
+			&:before {
+				content: none;
+			}
 		}
 	}
 }
