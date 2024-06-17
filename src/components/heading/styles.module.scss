@@ -1,0 +1,23 @@
+@use "@functions" as f;
+@use "@mixins" as m;
+
+.heading {
+	@include m.flex($fd: column, $jc: center, $ai: center, $gap: f.em(16));
+
+	text-align: center;
+
+	&__title {
+		width: fit-content;
+		padding: f.em(8) f.em(24);
+		border-radius: f.em(8);
+
+		color: var(--color-gray-800);
+		background-color: var(--color-blue-100);
+
+		font-weight: 700;
+	}
+
+	&__description {
+		color: var(--color-gray-100);
+	}
+}

@@ -118,17 +118,21 @@
 			@include m.position(static, $t: calc(100% + f.em(32)));
 
 			width: 100%;
+			padding-left: f.em(16);
+			margin-left: f.em(11);
 
-			border-color: var(--color-gray-600);
+			border: none;
+			border-left: solid f.em(1) #ff1fb1;
+			border-radius: 0;
 
 			&__item {
 				&:not(:last-child) {
-					border-color: var(--color-gray-600);
+					border: none;
 				}
 
 				.item {
 					&__button {
-						padding: f.em(16) f.em(20);
+						padding: f.em(16) 0;
 
 						transition: none;
 

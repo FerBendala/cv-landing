@@ -30,7 +30,7 @@
 }
 
 // Flex
-@mixin flex($flex: null, $fd: null, $fw: null, $ff: null, $jc: null, $ai: null, $ac: null, $gap: null) {
+@mixin flex($flex: null, $fd: null, $fw: null, $ff: null, $jc: null, $ai: null, $ac: null, $f: null, $gap: null) {
 	// To do display: inline-flex just write 'inline-flex' at the start of the include
 	@if $flex == "inline-flex" {
 		display: -webkit-inline-box;
@@ -123,7 +123,9 @@
 
 	align-content: $ac;
 
+	// Others
 	gap: $gap;
+	flex: $f;
 }
 
 // Flex Childs

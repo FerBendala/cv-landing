@@ -30,6 +30,11 @@ const ca = {
 				text: "Sóc un desenvolupador full stack (React, Vanilla.js i Node.js) amb un enfocament en crear (i ocasionalment dissenyar) experiències digitals excepcionals que siguin ràpides, accessibles, visualment atractives i responsives. Tot i que porto més de 3 anys creant aplicacions web, encara m'encanta com si fos una cosa nova.",
 				country: 'Barcelona, Espanya',
 				status: 'Disponible per a nous projectes'
+			},
+			skills: {
+				title: 'Habilitats',
+				description:
+					"Les habilitats, eines i tecnologies que realment m'encanten"
 			}
 		}
 	}

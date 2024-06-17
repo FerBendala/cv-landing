@@ -30,6 +30,11 @@ const en = {
 				text: "I'm a full stack developer (React, Vanilla.js & Node.js) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating web applications for over 3 years, I still love it as if it was something new.",
 				country: 'Barcelona, Spain',
 				status: 'Available for new projects'
+			},
+			skills: {
+				title: 'Skills',
+				description:
+					'The skills, tools and technologies I am really good at'
 			}
 		}
 	}

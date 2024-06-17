@@ -1,6 +1,7 @@
 import Head from '@/components/head/head';
 import Menu from '@/components/menu';
 import Header from '@/content/header';
+import Skills from '@/content/skills';
 import { useThemeStore } from '@/stores/theme.store';
 
 import styles from './app.module.scss';
@@ -13,6 +14,7 @@ const App = () => {
 			<Head />
 			<Menu />
 			<Header />
+			<Skills />
 		</div>
 	);
 };
