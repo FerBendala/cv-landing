@@ -1,0 +1,75 @@
+@use "@mixins" as m;
+@use "@functions" as f;
+
+.about {
+	@include m.container;
+	@include m.flex($fd: column, $gap: f.em(80));
+
+	padding: f.em(96) 0 f.em(88);
+
+	&__container {
+		@include m.flex($fd: column, $gap: f.em(32));
+	}
+
+	&__article {
+		@include m.flex($ai: center, $gap: f.em(48));
+
+		padding: f.em(48);
+		border-radius: f.em(16);
+
+		background-color: var(--color-gray-800);
+
+		&__image {
+			min-width: f.em(120);
+			min-height: f.em(120);
+		}
+
+		&__description {
+			@include m.flex($fd: column, $gap: f.em(8));
+
+			color: var(--color-gray-100);
+
+			.description {
+				&__title {
+					font-size: f.em(24);
+					font-weight: 600;
+				}
+
+				&__info {
+					@include m.flex($fd: column, $jc: space-between, $gap: f.em(4));
+
+					&__duration {
+						color: var(--color-gray-500);
+
+						font-size: f.em(14);
+					}
+
+					&__company {
+						color: var(--color-gray-400);
+
+						font-size: f.em(14);
+					}
+				}
+			}
+		}
+
+		@include m.media(tablet) {
+			@include m.flex($fd: column, $gap: f.em(32));
+
+			&__image {
+				max-height: f.em(120);
+				min-height: unset;
+			}
+
+			.description {
+				&__title {
+					font-size: f.em(20);
+				}
+
+				&__info {
+					@include m.flex($fd: row-reverse, $jc: space-between, $gap: f.em(4));
+				}
+			}
+		}
+	}
+}

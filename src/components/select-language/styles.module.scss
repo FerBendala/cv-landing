@@ -1,5 +1,5 @@
-@use "@functions" as f;
-@use "@mixins" as m;
+@use '@functions' as f;
+@use '@mixins' as m;
 
 .dropdown {
 	@include m.position(relative);
@@ -106,7 +106,7 @@
 
 			background-color: var(--color-gray-800);
 
-			content: "";
+			content: '';
 			transform: translateX(-50%);
 		}
 	}

@@ -1,5 +1,5 @@
-@use "@functions" as f;
-@use "@mixins" as m;
+@use '@functions' as f;
+@use '@mixins' as m;
 
 .skills {
 	padding: f.em(96) 0 f.em(120);
@@ -7,11 +7,11 @@
 
 	&__container {
 		@include m.container();
-		@include m.flex($fd: column, $ai: center, $gap: f.em(64));
+		@include m.flex($fd: column, $ai: center, $gap: f.em(80));
 	}
 
 	&__list {
-		@include m.grid($gc: repeat(10, 1fr), $gap: f.em(32));
+		@include m.grid($gc: repeat(7, 1fr), $ai: baseline, $gap: f.em(32));
 
 		&__item {
 			@include m.flex($fd: column, $ai: center, $gap: f.em(16));
@@ -19,6 +19,13 @@
 			color: var(--color-gray-100);
 
 			text-align: center;
+		}
+
+		@include m.media(tablet) {
+			@include m.grid($gc: repeat(4, 1fr));
+		}
+		@include m.media(phone) {
+			@include m.grid($gc: repeat(3, 1fr));
 		}
 	}
 }

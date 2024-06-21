@@ -1,24 +1,31 @@
-@use "sass:list";
-@use "sass:map";
-@use "sass:string";
-@use "functions" as f;
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:string';
+@use 'functions' as f;
+
+// Color Scheme
+@mixin set-colors($colors) {
+	@each $name, $color in $colors {
+		--color-#{$name}: #{$color};
+	}
+}
 
 // Font Face
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
 	$src: null;
 	$extmods: (
-		eot: "?",
-		svg: "#" + str-replace($name, " ", "_")
+		eot: '?',
+		svg: '#' + str-replace($name, ' ', '_')
 	);
 	$formats: (
-		otf: "opentype",
-		ttf: "truetype"
+		otf: 'opentype',
+		ttf: 'truetype'
 	);
 
 	@each $ext in $exts {
 		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
 		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+		$src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
 	}
 
 	@font-face {
@@ -30,168 +37,33 @@
 }
 
 // Flex
-@mixin flex($flex: null, $fd: null, $fw: null, $ff: null, $jc: null, $ai: null, $ac: null, $f: null, $gap: null) {
-	// To do display: inline-flex just write 'inline-flex' at the start of the include
-	@if $flex == "inline-flex" {
-		display: -webkit-inline-box;
-		display: -webkit-inline-flex;
-		display: -moz-inline-flex;
-		display: -ms-inline-flexbox;
+@mixin flex($d: null, $fd: null, $fw: null, $ff: null, $jc: null, $ai: null, $gap: null) {
+	@if $d == 'inline' {
 		display: inline-flex;
 	} @else {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flexbox;
 		display: flex;
 	}
 
-	// Flex direction
-	-webkit-flex-direction: $fd;
-	-moz-flex-direction: $fd;
-	-ms-flex-direction: $fd;
-	flex-direction: $fd;
-
-	// Flex wrap
-	-webkit-flex-wrap: $fw;
-	-moz-flex-wrap: $fw;
-
-	@if $fw ==nowrap {
-		-ms-flex-wrap: none;
-	} @else {
-		-ms-flex-wrap: $fw;
+	flex: {
+		direction: $fd;
+		wrap: $fw;
+		flow: $ff;
 	}
-
-	flex-wrap: $fw;
-
-	// Flex-flow
-	// No Webkit Box fallback.
-	-webkit-flex-flow: $ff;
-	-moz-flex-flow: $ff;
-	-ms-flex-flow: $ff;
-	flex-flow: $ff;
-
-	// Justify content
-	@if $jc ==flex-start {
-		-webkit-box-pack: start;
-		-ms-flex-pack: start;
-	} @else if $jc ==flex-end {
-		-webkit-box-pack: end;
-		-ms-flex-pack: end;
-	} @else if $jc ==space-between {
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-	} @else if $jc ==space-around {
-		-ms-flex-pack: distribute;
-	} @else {
-		-webkit-box-pack: $jc;
-		-ms-flex-pack: $jc;
-	}
-
-	-webkit-justify-content: $jc;
-	-moz-justify-content: $jc;
 	justify-content: $jc;
-
-	// Align items
-	@if $ai ==flex-start {
-		-webkit-box-align: start;
-		-ms-flex-align: start;
-	} @else if $ai ==flex-end {
-		-webkit-box-align: end;
-		-ms-flex-align: end;
-	} @else {
-		-webkit-box-align: $ai;
-		-ms-flex-align: $ai;
-	}
-
-	-webkit-align-items: $ai;
-	-moz-align-items: $ai;
 	align-items: $ai;
-
-	// Align content
-	// No Webkit Box Fallback.
-	-webkit-align-content: $ac;
-	-moz-align-content: $ac;
-
-	@if $ac ==flex-start {
-		-ms-flex-line-pack: start;
-	} @else if $ac ==flex-end {
-		-ms-flex-line-pack: end;
-	} @else {
-		-ms-flex-line-pack: $ac;
-	}
-
-	align-content: $ac;
-
-	// Others
 	gap: $gap;
-	flex: $f;
 }
 
 // Flex Childs
 @mixin flex-child($o: null, $fg: null, $fs: null, $fb: null, $as: null, $js: null, $f: null) {
-	// Order
-	-webkit-box-ordinal-group: $o;
-	-webkit-order: $o;
-	-moz-order: $o;
-	-ms-flex-order: $o;
 	order: $o;
-
-	// Flex grow
-	-webkit-box-flex: $fg;
-	-webkit-flex-grow: $fg;
-	-moz-flex-grow: $fg;
-	-ms-flex-positive: $fg;
-	flex-grow: $fg;
-
-	// Flex shrink
-	-webkit-flex-shrink: $fs;
-	-moz-flex-shrink: $fs;
-	-ms-flex-negative: $fs;
-	flex-shrink: $fs;
-
-	// Flex basis
-	-webkit-flex-basis: $fb;
-	-moz-flex-basis: $fb;
-	-ms-flex-preferred-size: $fb;
-	flex-basis: $fb;
-
-	// Align self
-	-webkit-align-self: $as;
-	-moz-align-self: $as;
-
-	@if $as ==flex-start {
-		-ms-flex-item-align: start;
-	} @else if $as ==flex-end {
-		-ms-flex-item-align: end;
-	} @else {
-		-ms-flex-item-align: $as;
+	flex: $f {
+		grow: $fg;
+		shrink: $fs;
+		basis: $fb;
 	}
-
 	align-self: $as;
-
-	// Justify self
-	@if $js ==flex-start {
-		-webkit-justify-self: start;
-		-moz-justify-self: start;
-		-ms-grid-column-align: start;
-		justify-self: start;
-	} @else if $js ==flex-end {
-		-webkit-justify-self: end;
-		-moz-justify-self: end;
-		-ms-grid-column-align: end;
-		justify-self: end;
-	} @else {
-		-ms-flex-column-align: $js;
-		justify-self: $js;
-	}
-
-	// Flex
-	-webkit-box: $f;
-	-moz-box: $f;
-	-webkit-flex: $f;
-	-ms-flex: $f;
-	flex: $f;
+	justify-self: $js;
 }
 
 // Grid
@@ -207,11 +79,9 @@
 }
 
 // Grid Child
-@mixin grid-child($ga: null, $gcs: null, $gce: null, $grs: null, $gre: null, $js: null, $as: null, $ps: null) {
-	grid-column-start: $gcs;
-	grid-column-end: $gce;
-	grid-row-start: $grs;
-	grid-row-end: $gre;
+@mixin grid-child($ga: null, $gc: null, $gr: null, $js: null, $as: null, $ps: null) {
+	grid-column: $gc;
+	grid-row: $gr;
 	grid-area: $ga;
 	justify-self: $js;
 	align-self: $as;
@@ -229,17 +99,17 @@
 // Position
 @mixin position($position, $t: null, $r: null, $b: null, $l: null, $i: null) {
 	position: $position;
+	inset: $i;
 	top: $t;
 	right: $r;
 	bottom: $b;
 	left: $l;
-	inset: $i;
 }
 
 // Background image
 @mixin bg-image($img: null, $bg: null, $bc: null, $br: null, $bs: null, $bp: null, $bm: null, $bo: null, $ba: null) {
 	background: {
-		image: $bg, url("#{$img}");
+		image: $bg, url('#{$img}');
 		color: $bc;
 		repeat: $br or no-repeat;
 		size: $bs;
@@ -250,104 +120,12 @@
 	}
 }
 
-// Add arrow to box
-@mixin arrow($ap: null, $ac: 50%, $ab: null, $abg: null, $as: 8px) {
-	background: $abg;
-	border: 1px solid $ab;
-
-	&:after,
-	&:before {
-		border: solid transparent;
-		content: "";
-		height: 0;
-		width: 0;
-		position: absolute;
-		pointer-events: none;
-
-		@if $ap == "left" {
-			right: 100%;
-			top: $ac;
-		} @else if $ap == "top" {
-			bottom: 100%;
-			left: $ac;
-		} @else if $ap == "right" {
-			left: 100%;
-			top: $ac;
-		} @else if $ap == "bottom" {
-			top: 100%;
-			left: $ac;
-		}
-	}
-
-	&:before {
-		border-color: transparent;
-		border-width: $as + 1;
-
-		@if $ap == "left" {
-			border-right-color: $ab;
-			margin-top: -($as + 1);
-		} @else if $ap == "top" {
-			border-bottom-color: $ab;
-			margin-left: -($as + 1);
-		} @else if $ap == "right" {
-			border-left-color: $ab;
-			margin-top: -($as + 1);
-		} @else if $ap == "bottom" {
-			border-top-color: $ab;
-			margin-left: -($as + 1);
-		}
-	}
-
-	&:after {
-		border-color: transparent;
-		border-width: $as;
-
-		@if $ap == "left" {
-			border-right-color: $abg;
-			margin-top: -$as;
-		} @else if $ap == "top" {
-			border-bottom-color: $abg;
-			margin-left: -$as;
-		} @else if $ap == "right" {
-			border-left-color: $abg;
-			margin-top: -$as;
-		} @else if $ap == "bottom" {
-			border-top-color: $abg;
-			margin-left: -$as;
-		}
-	}
-}
-
-// Add placeholder to input
-@mixin placeholder($c: null, $o: null) {
-	&::-webkit-input-placeholder {
-		color: $c;
-		opacity: $o;
-	}
-
-	&::-moz-placeholder {
-		color: $c;
-		opacity: $o;
-	}
-
-	&:-ms-input-placeholder {
-		color: $c;
-		opacity: $o;
-	}
-
-	&:-moz-placeholder {
-		color: $c;
-		opacity: $o;
-	}
-}
-
 // Media queries
-$max-width-sm: 576px;
-$max-width-md: 768px;
-$max-width-lg: 992px;
-$max-width-xl: 1281px;
-
 @mixin media($size) {
+	$max-width-sm: 576px;
+	$max-width-md: 768px;
+	$max-width-lg: 992px;
+	$max-width-xl: 1281px;
 	// For container @media
 	@if $size == xs {
 		@media (max-width: ($max-width-sm - 1)) {
@@ -392,26 +170,22 @@ $max-width-xl: 1281px;
 }
 
 // Container
-$max-container-width-xs: 100%;
-$max-container-width-sm: 512px;
-$max-container-width-md: 704px;
-$max-container-width-lg: 928px;
-$max-container-width-xl: 1224px;
-
 @mixin container {
+	$max-container-width-xs: 100%;
+	$max-container-width-sm: 512px;
+	$max-container-width-md: 704px;
+	$max-container-width-lg: 928px;
+	$max-container-width-xl: 1224px;
 	@include media(xs) {
 		max-width: $max-container-width-xs;
 		padding: 0 32px;
 	}
-
 	@include media(sm) {
 		max-width: $max-container-width-sm;
 	}
-
 	@include media(md) {
 		max-width: $max-container-width-md;
 	}
-
 	@include media(lg) {
 		max-width: $max-container-width-lg;
 	}
@@ -427,8 +201,10 @@ $max-container-width-xl: 1224px;
 @mixin scrollbar($thumb: null, $track: null, $size: null) {
 	$scrollbarWidth: if($size < 5, thin, auto);
 
-	scrollbar-width: $scrollbarWidth;
-	scrollbar-color: $thumb $track;
+	scrollbar {
+		width: $scrollbarWidth;
+		color: $thumb $track;
+	}
 
 	&::-webkit {
 		&-scrollbar {
@@ -444,12 +220,5 @@ $max-container-width-xl: 1224px;
 				background-color: $track;
 			}
 		}
-	}
-}
-
-// Color Scheme
-@mixin set-colors($colors) {
-	@each $name, $color in $colors {
-		--color-#{$name}: #{$color};
 	}
 }

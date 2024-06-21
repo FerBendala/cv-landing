@@ -1,5 +1,6 @@
 import Head from '@/components/head/head';
 import Menu from '@/components/menu';
+import About from '@/content/about';
 import Header from '@/content/header';
 import Skills from '@/content/skills';
 import { useThemeStore } from '@/stores/theme.store';
@@ -15,6 +16,7 @@ const App = () => {
 			<Menu />
 			<Header />
 			<Skills />
+			<About />
 		</div>
 	);
 };

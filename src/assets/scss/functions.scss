@@ -1,9 +1,9 @@
 // SASS Modules
-@use "sass:math";
-@use "sass:list";
+@use 'sass:math';
+@use 'sass:list';
 
 // String Replace
-@function str-replace($string, $search, $replace: "") {
+@function str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
 
 	@if $index {
@@ -16,7 +16,7 @@
 
 // Number conversion
 @function strip-unit($num) {
-	@if type-of($num) == "number" and not unitless($num) {
+	@if type-of($num) == 'number' and not unitless($num) {
 		@return math.div($num, $num * 0 + 1);
 	}
 

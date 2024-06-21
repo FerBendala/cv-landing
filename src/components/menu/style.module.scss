@@ -1,5 +1,5 @@
-@use "@functions" as f;
-@use "@mixins" as m;
+@use '@functions' as f;
+@use '@mixins' as m;
 
 .menu {
 	@include m.position(sticky, $t: 0);
@@ -11,7 +11,7 @@
 
 		backdrop-filter: blur(16px);
 
-		content: "";
+		content: '';
 		z-index: -1;
 	}
 
@@ -67,7 +67,7 @@
 
 					background-color: var(--color-gray-100);
 
-					content: "";
+					content: '';
 				}
 			}
 		}

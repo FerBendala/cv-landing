@@ -8,7 +8,7 @@ interface HeadingProps {
 const Heading = ({ title, description }: HeadingProps) => {
 	return (
 		<header className={styles.heading}>
-			<h1 className={styles.heading__title}>{title}</h1>
+			<h2 className={styles.heading__title}>{title}</h2>
 			<p className={styles.heading__description}>{description}</p>
 		</header>
 	);

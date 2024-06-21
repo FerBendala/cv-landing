@@ -33,8 +33,13 @@ const en = {
 			},
 			skills: {
 				title: 'Skills',
-				description:
-					'The skills, tools and technologies I am really good at'
+				description: 'The skills, tools and technologies I am really good at'
+			},
+			about: {
+				title: 'About me',
+				description: 'Here is a quick summary of my most recent experiences',
+				view_less: 'View less',
+				view_more: 'View more'
 			}
 		}
 	}

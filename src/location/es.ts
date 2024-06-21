@@ -33,8 +33,13 @@ const es = {
 			},
 			skills: {
 				title: 'Habilidades',
-				description:
-					'Las habilidades, herramientas y tecnologías que realmente me encantan'
+				description: 'Las habilidades, herramientas y tecnologías que realmente me encantan'
+			},
+			about: {
+				title: 'Sobre mi',
+				description: 'Aquí tienes un resumen rápido de mis experiencias más recientes',
+				view_less: 'Ver menos',
+				view_more: 'Ver más'
 			}
 		}
 	}

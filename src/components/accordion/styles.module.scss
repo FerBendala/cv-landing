@@ -1,0 +1,48 @@
+@use "@mixins" as m;
+@use "@functions" as f;
+
+.accordion {
+	@include m.flex($fd: column, $ai: flex-end, $gap: f.em(8));
+
+	&__text {
+		@include m.line-clamp(3);
+
+		max-height: f.em(80);
+
+		overflow: hidden;
+		transition: var(--transition-low);
+
+		&.open {
+			@include m.line-clamp(initial);
+
+			max-height: f.em(504);
+		}
+	}
+
+	&__button {
+		@include m.flex($jc: center, $ai: center, $gap: f.em(8));
+
+		padding: 0;
+		border: none;
+
+		color: var(--color-gray-400);
+		background-color: transparent;
+
+		font-size: f.em(12);
+		font-family: var(--font-primary);
+		cursor: pointer;
+
+		svg {
+			width: f.em(16);
+			height: f.em(16);
+
+			transition: var(--transition-low);
+		}
+
+		&.open {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

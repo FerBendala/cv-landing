@@ -33,8 +33,13 @@ const ca = {
 			},
 			skills: {
 				title: 'Habilitats',
-				description:
-					"Les habilitats, eines i tecnologies que realment m'encanten"
+				description: "Les habilitats, eines i tecnologies que realment m'encanten"
+			},
+			about: {
+				title: 'Sobre mi',
+				description: 'Aquí tens un resum ràpid de les meves experiències més recents',
+				view_less: 'Veure menys',
+				view_more: 'Veure mès'
 			}
 		}
 	}

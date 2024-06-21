@@ -26,10 +26,7 @@ const MenuMobile = () => {
 		else document.body.style.overflow = '';
 	}, [visible]);
 
-	const themeButtonText =
-		theme === 'dark'
-			? t('switch_to_light_theme')
-			: t('switch_to_dark_theme');
+	const themeButtonText = theme === 'dark' ? t('switch_to_light_theme') : t('switch_to_dark_theme');
 
 	return (
 		<nav className={styles.menu}>
@@ -41,14 +38,7 @@ const MenuMobile = () => {
 				aria-controls='menu-list'
 				onClick={() => setVisible(true)}
 			/>
-			<ul
-				id='menu-list'
-				className={[
-					styles.menu__screen,
-					visible && styles.visible
-				].join(' ')}
-				role='listbox'
-			>
+			<ul id='menu-list' className={[styles.menu__screen, visible && styles.visible].join(' ')} role='listbox'>
 				{/* Header */}
 				<li className={styles.menu__screen__header}>
 					<LogoFerBendala />
@@ -88,13 +78,7 @@ const MenuMobile = () => {
 						</li>
 						<li className={styles.actions__list__item}>
 							<ButtonIcon
-								icon={
-									theme === 'dark' ? (
-										<IconMoon />
-									) : (
-										<IconSun />
-									)
-								}
+								icon={theme === 'dark' ? <IconMoon /> : <IconSun />}
 								onClick={() => setTheme(true)}
 								aria-label={themeButtonText}
 								text={themeButtonText}

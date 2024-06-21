@@ -33,10 +33,7 @@ const SelectLanguage = ({}: SelectLangProps) => {
 	};
 
 	const handleClickOutside = (event: MouseEvent) => {
-		if (
-			dropdownRef.current &&
-			!dropdownRef.current.contains(event.target as Node)
-		) {
+		if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
 			setVisible(false);
 		}
 	};
@@ -49,11 +46,7 @@ const SelectLanguage = ({}: SelectLangProps) => {
 	}, []);
 
 	return (
-		<nav
-			className={styles.dropdown}
-			ref={dropdownRef}
-			aria-label={t('language_selector')}
-		>
+		<nav className={styles.dropdown} ref={dropdownRef} aria-label={t('language_selector')}>
 			<ButtonIcon
 				icon={<IconLocation />}
 				aria-label={t('change_language')}
@@ -65,23 +58,12 @@ const SelectLanguage = ({}: SelectLangProps) => {
 			/>
 			<ul
 				id={`language-list-${random}`}
-				className={[
-					styles['dropdown__list'],
-					visible && styles.visible
-				].join(' ')}
+				className={[styles['dropdown__list'], visible && styles.visible].join(' ')}
 				role='listbox'
 			>
 				{languages.map(({ label, code, flag }) => (
-					<li
-						key={code}
-						className={styles['dropdown__list__item']}
-						role='option'
-						aria-selected='false'
-					>
-						<button
-							onClick={() => handleClick(code)}
-							className={styles['item__button']}
-						>
+					<li key={code} className={styles['dropdown__list__item']} role='option' aria-selected='false'>
+						<button onClick={() => handleClick(code)} className={styles['item__button']}>
 							<img src={flag} alt={label} />
 							{label}
 						</button>
