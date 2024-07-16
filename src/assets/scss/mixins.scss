@@ -1,7 +1,7 @@
-@use 'sass:list';
-@use 'sass:map';
-@use 'sass:string';
-@use 'functions' as f;
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+@use "functions" as f;
 
 // Color Scheme
 @mixin set-colors($colors) {
@@ -14,18 +14,18 @@
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
 	$src: null;
 	$extmods: (
-		eot: '?',
-		svg: '#' + str-replace($name, ' ', '_')
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
 	);
 	$formats: (
-		otf: 'opentype',
-		ttf: 'truetype'
+		otf: "opentype",
+		ttf: "truetype"
 	);
 
 	@each $ext in $exts {
 		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
 		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
 	}
 
 	@font-face {
@@ -38,7 +38,7 @@
 
 // Flex
 @mixin flex($d: null, $fd: null, $fw: null, $ff: null, $jc: null, $ai: null, $gap: null) {
-	@if $d == 'inline' {
+	@if $d == "inline" {
 		display: inline-flex;
 	} @else {
 		display: flex;
@@ -89,11 +89,11 @@
 }
 
 // Line clamp
-@mixin line-clamp($l: null) {
+@mixin line-clamp($l: null, $o: hidden) {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: $l;
-	overflow: hidden;
+	overflow: $o;
 }
 
 // Position
@@ -109,7 +109,7 @@
 // Background image
 @mixin bg-image($img: null, $bg: null, $bc: null, $br: null, $bs: null, $bp: null, $bm: null, $bo: null, $ba: null) {
 	background: {
-		image: $bg, url('#{$img}');
+		image: $bg, url("#{$img}");
 		color: $bc;
 		repeat: $br or no-repeat;
 		size: $bs;

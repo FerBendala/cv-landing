@@ -2,12 +2,12 @@
 @use "@functions" as f;
 
 .about {
-	@include m.container;
 	@include m.flex($fd: column, $gap: f.em(80));
 
 	padding: f.em(96) 0 f.em(88);
 
 	&__container {
+		@include m.container;
 		@include m.flex($fd: column, $gap: f.em(32));
 	}
 

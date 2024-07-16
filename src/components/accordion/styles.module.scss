@@ -5,17 +5,40 @@
 	@include m.flex($fd: column, $ai: flex-end, $gap: f.em(8));
 
 	&__text {
-		@include m.line-clamp(3);
+		@include m.media(tablet) {
+			@include m.position(relative);
 
-		max-height: f.em(80);
+			max-height: f.em(80);
+			min-height: f.em(80);
 
-		overflow: hidden;
-		transition: var(--transition-low);
+			overflow: hidden;
+			transition: var(--transition);
 
-		&.open {
-			@include m.line-clamp(initial);
+			&--open {
+				max-height: f.em(504);
 
-			max-height: f.em(504);
+				.accordion__text--overlay {
+					opacity: 0;
+				}
+			}
+
+			&--overlay {
+				@include m.position(absolute, $r: 0, $b: 0, $l: 0);
+
+				height: f.em(48);
+				opacity: 1;
+
+				transition: opacity var(--transition-low);
+				pointer-events: none;
+
+				&._800 {
+					background: linear-gradient(to bottom, transparent, var(--color-gray-800));
+				}
+
+				&._700 {
+					background: linear-gradient(to bottom, transparent, var(--color-gray-700));
+				}
+			}
 		}
 	}
 

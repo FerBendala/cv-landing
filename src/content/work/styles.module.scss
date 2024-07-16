@@ -1,0 +1,133 @@
+@use "@mixins" as m;
+@use "@functions" as f;
+
+.about {
+	padding: f.em(96) 0 f.em(120);
+	background-color: var(--color-gray-800);
+
+	&__container {
+		@include m.container();
+		@include m.flex($fd: column, $ai: center, $gap: f.em(80));
+	}
+
+	&__article {
+		@include m.flex($ai: stretch, $jc: stretch);
+
+		width: 100%;
+		border-radius: f.em(16);
+
+		background-color: var(--color-gray-700);
+
+		text-decoration: none;
+
+		overflow: hidden;
+
+		&__container {
+			@include m.flex($fd: column, $ai: center, $gap: f.em(32));
+
+			width: 100%;
+		}
+
+		&__figure {
+			@include m.flex($ai: center);
+
+			padding: f.em(48);
+			min-width: 40%;
+
+			background-color: var(--color-gray-600);
+
+			img {
+				width: 100%;
+				border-radius: f.em(16);
+				box-shadow: var(--box-shadow);
+
+				transition: var(--transition-low);
+			}
+		}
+
+		&__description {
+			@include m.flex($fd: column, $gap: f.em(8));
+
+			padding: f.em(48);
+
+			color: var(--color-gray-100);
+
+			.description {
+				&__title {
+					font-size: f.em(24);
+					font-weight: 600;
+				}
+
+				&__footer {
+					@include m.position(relative);
+
+					&__tags {
+						@include m.flex($fw: wrap, $gap: f.em(8));
+
+						max-width: fit-content;
+						margin-top: f.em(24);
+
+						overflow: auto;
+						scroll-snap-type: x;
+
+						.tags {
+							&__tag {
+								display: block;
+								border-radius: f.em(100);
+								padding: f.em(8) f.em(16);
+
+								color: var(--color-white);
+								background-color: var(--color-pink-100);
+
+								font-weight: 600;
+								white-space: nowrap;
+
+								scroll-snap-align: center;
+							}
+						}
+					}
+
+					@include m.media(tablet) {
+						&__tags {
+							@include m.flex($fw: nowrap);
+
+							padding: 0 f.em(24);
+						}
+
+						&--overlay {
+							width: f.em(24);
+							opacity: 1;
+
+							transition: opacity var(--transition-low);
+							pointer-events: none;
+
+							&:first-of-type {
+								@include m.position(absolute, $t: 0, $b: 0, $r: f.em(-1));
+
+								background: linear-gradient(to right, transparent, var(--color-gray-700));
+							}
+
+							&:last-of-type {
+								@include m.position(absolute, $t: 0, $b: 0, $l: f.em(-1));
+
+								background: linear-gradient(to left, transparent, var(--color-gray-700));
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&:hover {
+			.about__article__figure {
+				img {
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		@include m.media(tablet) {
+			@include m.flex($fd: column, $gap: f.em(32));
+		}
+	}
+}

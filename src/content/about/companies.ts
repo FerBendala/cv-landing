@@ -7,38 +7,38 @@ import LogoTiendeo from '@image/svg/logo-tiendeo.svg?react';
 const companies = [
 	{
 		Icon: LogoFXS,
-		title: 'Sr. Frontend Developer',
-		duration: 'Now - from October 2023',
-		company: 'FXStreet',
-		text: 'I have utilized various technologies to create web applications, including HTML, Sass, React, JavaScript, and Python, among others. Additionally, I have automated processes to generate banners and develop websites more efficiently. I have also worked on improving team performance through the analysis and construction of workflows in Jira. Finally, I have trained and mentored junior staff in these areas.'
+		title: 'fxstreet.title',
+		duration: 'fxstreet.duration',
+		company: 'fxstreet.company',
+		text: 'fxstreet.text'
 	},
 	{
 		Icon: LogoTiendeo,
-		title: 'Sr. Frontend Developer',
-		duration: '3 years - from November 2020 to October 2023',
-		company: 'Tiendeo',
-		text: 'I have utilized various technologies to create web applications, including HTML, Sass, React, JavaScript, and Python, among others. Additionally, I have automated processes to generate banners and develop websites more efficiently. I have also worked on improving team performance through the analysis and construction of workflows in Jira. Finally, I have trained and mentored junior staff in these areas.'
+		title: 'tiendeo.title',
+		duration: 'tiendeo.duration',
+		company: 'tiendeo.company',
+		text: 'tiendeo.text'
 	},
 	{
 		Icon: LogoAxpe,
-		title: 'Sr. Frontend Developer',
-		duration: '~2 years - from July 2019 to October 2020',
-		company: 'Axpe',
-		text: 'I have utilized various technologies to create web applications, including HTML, Sass, React, JavaScript, and Python, among others. Additionally, I have automated processes to generate banners and develop websites more efficiently. I have also worked on improving team performance through the analysis and construction of workflows in Jira. Finally, I have trained and mentored junior staff in these areas.'
+		title: 'axpe.title',
+		duration: 'axpe.duration',
+		company: 'axpe.company',
+		text: 'axpe.text'
 	},
 	{
 		Icon: LogoInbenta,
-		title: 'Sr. Frontend Developer',
-		duration: '3 years - from March 2016 to May 2019',
-		company: 'Inbenta',
-		text: 'I have utilized various technologies to create web applications, including HTML, Sass, React, JavaScript, and Python, among others. Additionally, I have automated processes to generate banners and develop websites more efficiently. I have also worked on improving team performance through the analysis and construction of workflows in Jira. Finally, I have trained and mentored junior staff in these areas.'
+		title: 'inbenta.title',
+		duration: 'inbenta.duration',
+		company: 'inbenta.company',
+		text: 'inbenta.text'
 	},
 	{
 		Icon: LogoIngens,
-		title: 'Sr. Frontend Developer',
-		duration: '~2 years - from December 2012 to October 2014',
-		company: 'Ingens',
-		text: 'I have utilized various technologies to create web applications, including HTML, Sass, React, JavaScript, and Python, among others. Additionally, I have automated processes to generate banners and develop websites more efficiently. I have also worked on improving team performance through the analysis and construction of workflows in Jira. Finally, I have trained and mentored junior staff in these areas.'
+		title: 'ingens.title',
+		duration: 'ingens.duration',
+		company: 'ingens.company',
+		text: 'ingens.text'
 	}
 ];
 

@@ -1,4 +1,5 @@
-@use '@mixins' as m;
+@use "@mixins" as m;
+@use "@functions" as f;
 
 $dark-theme-colors: (
 	gray-100: #fafaff,
@@ -27,9 +28,12 @@ $light-theme-colors: (
 );
 
 :root {
-	--font-primary: 'Poppins';
+	--font-primary: "Poppins";
+
 	--transition: 0.32s ease;
 	--transition-low: 0.48s ease;
+
+	--box-shadow: 0 #{f.em(8)} #{f.em(24)} 0 rgba(0, 0, 0, 0.24);
 
 	@include m.set-colors($dark-theme-colors);
 

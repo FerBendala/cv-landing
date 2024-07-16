@@ -23,25 +23,29 @@ const About = () => {
 
 	return (
 		<section className={styles.about}>
-			<Heading title={t('title')} description={t('description')} />
-
-			<section className={styles.about__container}>
+			<div className={styles.about__container}>
+				<Heading title={t('title')} description={t('description')} />
 				{companies.map(({ Icon, title, duration, company, text }, index) => (
 					<article key={index} className={styles.about__article}>
 						<Icon className={styles.about__article__image} />
 						<section className={styles.about__article__description}>
-							<h3 className={styles.description__title}>{title}</h3>
+							<h3 className={styles.description__title}>{t(title)}</h3>
 							<p className={styles.description__info}>
 								<span className={styles.description__info__duration}>
-									{isTablet ? duration.split('-')[0] : duration}
+									{isTablet ? t(duration).split('-')[0] : t(duration)}
 								</span>
-								<span className={styles.description__info__company}>{company}</span>
+								<span className={styles.description__info__company}>{t(company)}</span>
 							</p>
-							<Accordion text={text} isOpen={openIndex === index} onToggle={() => handleToggle(index)} />
+							<Accordion
+								text={t(text)}
+								isOpen={openIndex === index}
+								onToggle={() => handleToggle(index)}
+								color={800}
+							/>
 						</section>
 					</article>
 				))}
-			</section>
+			</div>
 		</section>
 	);
 };
