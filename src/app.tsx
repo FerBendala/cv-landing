@@ -1,13 +1,14 @@
 import Head from '@/components/head/head';
 import Menu from '@/components/menu';
 import About from '@/content/about';
+import Contact from '@/content/contact';
+import Footer from '@/content/footer';
 import Header from '@/content/header';
 import Skills from '@/content/skills';
 import Work from '@/content/work';
 import { useThemeStore } from '@/stores/theme.store';
 
 import styles from './app.module.scss';
-import Contact from './content/contact';
 
 const App = () => {
 	const { theme } = useThemeStore();
@@ -21,6 +22,7 @@ const App = () => {
 			<About />
 			<Work />
 			<Contact />
+			<Footer />
 		</div>
 	);
 };

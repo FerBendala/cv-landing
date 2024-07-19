@@ -88,6 +88,21 @@ const es = {
 					title: 'Shopfully Website',
 					text: 'Trabajé en mejorar el rendimiento del sitio web, integrar nuevas funcionalidades y mantener la arquitectura general de las aplicaciones web para cumplir con los requisitos comerciales.'
 				}
+			},
+			contact: {
+				title: 'Ponte en contacto',
+				description:
+					'¿Qué sigue? No dudes en contactarme si estás buscando un desarrollador, tienes alguna pregunta o simplemente quieres conectar.',
+				name: 'Nombre',
+				email: 'Correo electrónico',
+				phone: 'Teléfono',
+				company: 'Empresa',
+				subject: 'Asunto',
+				message: 'Mensaje',
+				send: 'Enviar mensaje'
+			},
+			footer: {
+				text: '2024 | Diseñado y codificado con ❤️️ por Fernando Bendala'
 			}
 		}
 	}

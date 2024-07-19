@@ -1,9 +1,9 @@
 // SASS Modules
-@use 'sass:math';
-@use 'sass:list';
+@use "sass:math";
+@use "sass:list";
 
 // String Replace
-@function str-replace($string, $search, $replace: '') {
+@function str-replace($string, $search, $replace: "") {
 	$index: str-index($string, $search);
 
 	@if $index {
@@ -16,11 +16,29 @@
 
 // Number conversion
 @function strip-unit($num) {
-	@if type-of($num) == 'number' and not unitless($num) {
+	@if type-of($num) == "number" and not unitless($num) {
 		@return math.div($num, $num * 0 + 1);
 	}
 
 	@return $num;
+}
+
+// Hex to RGB
+@function hex-to-rgb($hex) {
+	// Remover el símbolo de hash si está presente
+	$hex: str-slice($hex, 2) if str-index($hex, "#") == 1;
+
+	// Extraer los componentes RGB
+	$r: str-slice($hex, 1, 2);
+	$g: str-slice($hex, 3, 4);
+	$b: str-slice($hex, 5, 6);
+
+	// Convertir los componentes a valores numéricos
+	$r: str-to-number("0x" + $r);
+	$g: str-to-number("0x" + $g);
+	$b: str-to-number("0x" + $b);
+
+	@return $r, $g, $b;
 }
 
 // rem / em conversion

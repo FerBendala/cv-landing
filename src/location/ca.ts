@@ -88,6 +88,21 @@ const ca = {
 					title: 'Shopfully Website',
 					text: "Vaig treballar en millorar el rendiment del lloc web, integrar noves funcionalitats i mantenir l'arquitectura general de les aplicacions web per complir amb els requisits empresarials."
 				}
+			},
+			contact: {
+				title: "Posa't en contacte",
+				description:
+					'Què segueix? No dubtis a contactar-me si estàs buscant un desenvolupador, tens algun dubte o simplement vols connectar.',
+				name: 'Nom',
+				email: 'Correu electrònic',
+				phone: 'Telèfon',
+				company: 'Empresa',
+				subject: 'Assumpte',
+				message: 'Missatge',
+				send: 'Enviar missatge'
+			},
+			footer: {
+				text: '2024 | Dissenyat i codificat amb ❤️️ per Fernando Bendala'
 			}
 		}
 	}

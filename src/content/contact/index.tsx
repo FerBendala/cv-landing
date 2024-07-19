@@ -1,10 +1,11 @@
-import { useForm } from 'react-hook-form';
-
-import { s } from 'node_modules/vite/dist/node/types.d-aGj9QkWt';
+import IconGmail from '@image/svg/button-icon-gmail.svg?react';
+import IconPhone from '@image/svg/button-icon-phone.svg?react';
 
 import Button from '@/components/button';
+import ButtonTextIcon from '@/components/button-text-icon';
 import Heading from '@/components/heading';
 import { useLocation } from '@/hooks/useLocation';
+import personalInfo from '@/location/generic';
 
 import styles from './styles.module.scss';
 
@@ -46,10 +47,10 @@ const Contact = () => {
 			<div className={styles.contact__container}>
 				<Heading title={t('title')} description={t('description')} />
 
-				<div className={styles.contact__form__container}>
+				<section className={styles.contact__form__container}>
 					<div className={styles.contact__form__buttons}>
-						<Button text={t('button')} />
-						<Button text={t('button')} />
+						<ButtonTextIcon text={personalInfo.email} icon={<IconGmail />} />
+						<ButtonTextIcon text={personalInfo.phone} icon={<IconPhone />} />
 					</div>
 
 					<form
@@ -60,14 +61,23 @@ const Contact = () => {
 					>
 						{form.map(({ label }, index) => (
 							<label key={index} htmlFor={label} className={styles.contact__form__label}>
-								<span className={styles.label__text}>{t(label)}</span>
-								<input type='text' id={label} name={label} className={styles.label__input} />
+								<span className={styles.label__text}>{t(label.toLowerCase())}</span>
+								{index !== form.length - 1 ? (
+									<input type='text' id={label} name={label} className={styles.label__input} />
+								) : (
+									<textarea
+										typeof='text'
+										id={label}
+										name={label}
+										className={styles.label__textarea}
+									/>
+								)}
 							</label>
 						))}
 
-						<input type='button' value='Submit' />
+						<Button text={t('send')} type='submit' classname={styles.contact__form__button} />
 					</form>
-				</div>
+				</section>
 			</div>
 		</section>
 	);

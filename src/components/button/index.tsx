@@ -1,13 +1,17 @@
+import classNames from 'classnames';
+
 import style from './styles.module.scss';
 
 interface ButtonProps {
 	text: string;
+	type?: 'button' | 'submit' | 'reset';
+	classname?: string;
 	onClick?: () => void;
 }
 
-const Button = ({ text, onClick, ...data }: ButtonProps) => {
+const Button = ({ text, type = 'button', classname, onClick, ...data }: ButtonProps) => {
 	return (
-		<button type='button' className={style.button} onClick={onClick} {...data}>
+		<button type={type} className={classNames(style.button, classname && classname)} onClick={onClick} {...data}>
 			{text}
 		</button>
 	);

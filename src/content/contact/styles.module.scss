@@ -8,11 +8,13 @@
 
 	&__container {
 		@include m.container;
-		@include m.flex($fd: column, $gap: f.em(32));
+		@include m.flex($fd: column, $gap: f.em(80));
+
+		width: 100%;
 	}
 
 	&__form {
-		@include m.flex($fd: column, $gap: f.em(16));
+		@include m.grid($gc: repeat(2, minmax(0, 1fr)), $gap: f.em(16));
 
 		padding: f.em(48);
 		border-radius: f.em(16);
@@ -20,9 +22,7 @@
 		background-color: var(--color-gray-800);
 
 		&__container {
-			@include m.flex($fd: column, $ai: stretch, $gap: f.em(16));
-
-			width: 100%;
+			@include m.flex($fd: column, $gap: f.em(24));
 		}
 
 		&__buttons {
@@ -30,21 +30,66 @@
 		}
 
 		&__label {
+			@include m.position(relative);
 			@include m.flex($fd: column, $gap: f.em(8));
+
+			overflow: hidden;
+
+			&:nth-child(n + 5) {
+				@include m.grid-child($gc: #{1 / 3});
+			}
 
 			.label {
 				&__text {
-					color: var(--color-gray-100);
+					@include m.position(absolute, $t: 0, $l: 0, $r: 0);
+
+					display: block;
+					padding: 0 f.em(12);
+					border-radius: f.em(8) f.em(8) 0 0;
+					box-shadow: 0 0 f.em(12) var(--color-gray-600);
+
+					color: var(--color-gray-400);
+					background-color: var(--color-gray-600);
 				}
 
-				&__input {
-					padding: f.em(8);
+				&__input,
+				&__textarea {
+					height: f.em(72);
+					padding: f.em(32) f.em(14) f.em(8);
 					border-radius: f.em(8);
 					border: none;
 					outline: none;
-					background-color: var(--color-gray-700);
+
+					color: var(--color-gray-100);
+					background-color: var(--color-gray-600);
+
+					font-family: var(--font-primary);
+				}
+
+				&__textarea {
+					height: f.em(312);
+					padding: f.em(36) f.em(14) f.em(8);
+					resize: none;
 				}
 			}
+		}
+
+		&__button {
+			@include m.grid-child($gc: #{1 / 3}, $js: center);
+
+			width: 100%;
+			max-width: f.em(232);
+			height: f.em(56);
+
+			background: linear-gradient(
+				-45deg,
+				var(--color-pink-100) 0%,
+				var(--color-pink-100) 40%,
+				var(--color-pink-100) 56%,
+				var(--color-blue-100) 100%
+			);
+			background-size: auto 720%;
+			background-position: 0 100%;
 		}
 	}
 }

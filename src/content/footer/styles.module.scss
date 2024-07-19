@@ -1,0 +1,29 @@
+@use "@mixins" as m;
+@use "@functions" as f;
+
+.footer {
+	@include m.flex($ai: center);
+
+	min-height: f.em(64);
+	padding: f.em(32) 0;
+
+	color: var(--color-gray-100);
+	background-color: var(--color-gray-800);
+
+	&__container {
+		@include m.container;
+		@include m.flex($ai: center, $gap: f.em(8));
+
+		width: 100%;
+	}
+
+	svg {
+		min-width: f.em(24);
+	}
+
+	@include m.media(tablet) {
+		&__container {
+			@include m.flex($gap: f.em(16));
+		}
+	}
+}

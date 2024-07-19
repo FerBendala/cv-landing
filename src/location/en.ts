@@ -1,3 +1,5 @@
+import { text } from 'stream/consumers';
+
 const en = {
 	translation: {
 		meta: {
@@ -88,6 +90,21 @@ const en = {
 					title: 'Shopfully Website',
 					text: 'I worked on enhancing website performance, integrating new features, and maintaining the overall architecture of the web applications to meet business requirements.'
 				}
+			},
+			contact: {
+				title: 'Get in touch',
+				description:
+					"What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.",
+				name: 'Name',
+				email: 'Email',
+				phone: 'Phone',
+				company: 'Company',
+				subject: 'Subject',
+				message: 'Message',
+				send: 'Send message'
+			},
+			footer: {
+				text: '2024 | Designed and coded with ❤️️ by Fernando Bendala'
 			}
 		}
 	}
