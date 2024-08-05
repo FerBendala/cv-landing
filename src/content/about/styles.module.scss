@@ -22,6 +22,8 @@
 		&__image {
 			min-width: f.em(120);
 			min-height: f.em(120);
+
+			color: var(--color-gray-100);
 		}
 
 		&__description {
@@ -55,6 +57,8 @@
 
 		@include m.media(tablet) {
 			@include m.flex($fd: column, $gap: f.em(32));
+
+			padding: f.em(32) f.em(24) f.em(24);
 
 			&__image {
 				max-height: f.em(120);

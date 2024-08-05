@@ -6,12 +6,19 @@ interface ButtonProps {
 	text: string;
 	type?: 'button' | 'submit' | 'reset';
 	classname?: string;
+	disabled?: boolean;
 	onClick?: () => void;
 }
 
-const Button = ({ text, type = 'button', classname, onClick, ...data }: ButtonProps) => {
+const Button = ({ text, type = 'button', classname, onClick, disabled, ...data }: ButtonProps) => {
 	return (
-		<button type={type} className={classNames(style.button, classname && classname)} onClick={onClick} {...data}>
+		<button
+			type={type}
+			className={classNames(style.button, classname && classname)}
+			onClick={onClick}
+			disabled={disabled}
+			{...data}
+		>
 			{text}
 		</button>
 	);

@@ -1,8 +1,8 @@
 const customLinks = [
-	{ name: 'Skills', url: '#' },
-	{ name: 'About', url: '#' },
-	{ name: 'Work', url: '#' },
-	{ name: 'Contact', url: '#' }
+	{ name: 'Skills', url: '#skills' },
+	{ name: 'About', url: '#about' },
+	{ name: 'Work', url: '#work' },
+	{ name: 'Contact', url: '#contact' }
 ];
 
 export default customLinks;

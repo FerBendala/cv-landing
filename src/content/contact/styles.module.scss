@@ -44,8 +44,8 @@
 					@include m.position(absolute, $t: 0, $l: 0, $r: 0);
 
 					display: block;
-					padding: 0 f.em(12);
-					border-radius: f.em(8) f.em(8) 0 0;
+					padding: f.em(4) f.em(12) 0;
+					border-radius: f.em(7) f.em(7) 0 0;
 					box-shadow: 0 0 f.em(12) var(--color-gray-600);
 
 					color: var(--color-gray-400);
@@ -90,6 +90,23 @@
 			);
 			background-size: auto 720%;
 			background-position: 0 100%;
+			color: var(--color-gray-100);
+		}
+
+		@include m.media(tablet) {
+			padding: f.em(24);
+
+			&__buttons {
+				@include m.media(tablet) {
+					@include m.flex($fd: column);
+				}
+			}
+
+			&__label {
+				@include m.media(tablet) {
+					@include m.grid-child($gc: #{1 / 3});
+				}
+			}
 		}
 	}
 }

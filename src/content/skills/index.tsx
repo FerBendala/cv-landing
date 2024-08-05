@@ -10,7 +10,7 @@ const Skills = () => {
 	});
 
 	return (
-		<section className={styles.skills}>
+		<section id='skills' className={styles.skills}>
 			<div className={styles.skills__container}>
 				<Heading title={t('title')} description={t('description')} />
 

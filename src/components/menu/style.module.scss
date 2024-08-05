@@ -47,7 +47,7 @@
 					transition: var(--transition);
 
 					&:hover {
-						color: var(--color-pink-100);
+						color: var(--color-only-pink-100);
 					}
 				}
 			}
@@ -79,8 +79,22 @@
 		}
 	}
 
+	@include m.media(laptop) {
+		&__logo {
+			svg {
+				width: f.em(112);
+			}
+		}
+	}
+
 	@include m.media(tablet) {
 		background-color: transparent;
 		padding: f.em(16) 0;
+
+		&__logo {
+			svg {
+				width: f.em(224);
+			}
+		}
 	}
 }

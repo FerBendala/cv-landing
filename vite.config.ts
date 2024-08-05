@@ -1,5 +1,6 @@
 import path from 'path';
 import { defineConfig } from 'vite';
+import { compression } from 'vite-plugin-compression2';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -16,7 +17,14 @@ const dynamicPath = (route: string) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react(), tsconfigPaths(), svgr({ include: '**/*.svg?react' })],
+	plugins: [react(), tsconfigPaths(), svgr({ include: '**/*.svg?react' }), compression()],
+	build: {
+		outDir: 'dist',
+		assetsInlineLimit: 4096 // 4 KB
+	},
+	server: {
+		open: true
+	},
 	resolve: {
 		alias: {
 			'@mixins': dynamicPath('src/assets/scss/mixins.scss'),

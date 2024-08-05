@@ -1,9 +1,9 @@
-@use '@functions' as f;
-@use '@mixins' as m;
+@use "@functions" as f;
+@use "@mixins" as m;
 
 .header {
 	@include m.container();
-	@include m.grid($ga: 'description image' 'location image' 'links image', $gap: f.em(32) f.em(40));
+	@include m.grid($ga: "description image" "location image" "links image", $gap: f.em(32) f.em(40));
 
 	padding: f.em(112) 0 f.em(88);
 
@@ -11,7 +11,12 @@
 
 	@include m.media(tablet) {
 		padding: f.em(72) 0;
-		@include m.grid($ga: 'description' 'image' 'location' 'links', $gap: f.em(24));
+		@include m.grid($ga: "description" "image" "location" "links", $gap: f.em(24));
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 	@include m.media(phone) {
 		padding: f.em(72) f.em(32);
@@ -56,19 +61,12 @@
 		transition: var(--transition);
 
 		&:hover {
-			color: var(--color-pink-100);
+			color: var(--color-only-pink-100);
 		}
 	}
 
 	svg {
 		width: f.em(24);
 		height: f.em(24);
-	}
-
-	img {
-		@include m.media(tablet) {
-			width: 100%;
-			height: auto;
-		}
 	}
 }

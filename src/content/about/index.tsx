@@ -22,7 +22,7 @@ const About = () => {
 	};
 
 	return (
-		<section className={styles.about}>
+		<section id='about' className={styles.about}>
 			<Heading title={t('title')} description={t('description')} />
 			<div className={styles.about__container}>
 				{companies.map(({ Icon, title, duration, company, text }, index) => (

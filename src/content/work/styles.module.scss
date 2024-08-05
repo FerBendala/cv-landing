@@ -127,7 +127,16 @@
 		}
 
 		@include m.media(tablet) {
-			@include m.flex($fd: column, $gap: f.em(32));
+			@include m.flex($fd: column, $gap: 0);
+
+			&__figure,
+			&__description {
+				padding: f.em(24);
+
+				img {
+					border-radius: f.em(8);
+				}
+			}
 		}
 	}
 }

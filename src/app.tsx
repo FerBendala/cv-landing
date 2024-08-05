@@ -1,3 +1,6 @@
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Head from '@/components/head/head';
 import Menu from '@/components/menu';
 import About from '@/content/about';
@@ -16,6 +19,7 @@ const App = () => {
 	return (
 		<div className={[styles.app, theme].join(' ')}>
 			<Head />
+			<ToastContainer />
 			<Menu />
 			<Header />
 			<Skills />

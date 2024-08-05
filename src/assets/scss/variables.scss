@@ -10,10 +10,13 @@ $dark-theme-colors: (
 	gray-600: #33363f,
 	gray-700: #18191d,
 	gray-800: #101117,
+	gray-title: #101117,
 	pink-50: #ff69b430,
 	pink-100: #ff1fb1,
+	only-pink-100: #ff1fb1,
 	blue-50: #79fbff30,
-	blue-100: #79fbff
+	blue-100: #79fbff,
+	only-blue-100: #79fbff
 );
 
 $light-theme-colors: (
@@ -22,26 +25,30 @@ $light-theme-colors: (
 	gray-300: #33363f,
 	gray-400: #8a90b6,
 	gray-500: #b6bde9,
-	gray-600: #e6e8fd,
-	gray-700: #f4f5fe,
-	gray-800: #fafaff,
-	pink-50: #ff69b430,
-	pink-100: #ff1fb1,
-	blue-50: #79fbff30,
-	blue-100: #79fbff
+	gray-600: #f4f5fe,
+	gray-700: #fafaff,
+	gray-800: #e6e8fd,
+	gray-title: #fafaff,
+	pink-50: #79fbff30,
+	pink-100: #79fbff,
+	only-pink-100: #ff1fb1,
+	blue-50: #ff69b430,
+	blue-100: #ff1fb1,
+	only-blue-100: #79fbff
 );
 
 :root {
-	--font-primary: "Poppins";
+	--font-primary: "Poppins", sans-serif;
 
 	--transition: 0.32s ease;
 	--transition-low: 0.48s ease;
 
 	--box-shadow: 0 #{f.em(8)} #{f.em(24)} 0 rgba(0, 0, 0, 0.24);
 
-	@include m.set-colors($dark-theme-colors);
-
-	.light {
+	&:has(.dark) {
+		@include m.set-colors($dark-theme-colors);
+	}
+	&:has(.light) {
 		@include m.set-colors($light-theme-colors);
 	}
 }

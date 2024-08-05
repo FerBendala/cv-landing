@@ -1,5 +1,5 @@
-@use '@functions' as f;
-@use '@mixins' as m;
+@use "@functions" as f;
+@use "@mixins" as m;
 
 .menu {
 	&__screen {
@@ -48,10 +48,6 @@
 							text-decoration: none;
 
 							transition: var(--transition);
-
-							&:hover {
-								color: var(--color-pink-100);
-							}
 						}
 					}
 				}

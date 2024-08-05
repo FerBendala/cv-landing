@@ -8,16 +8,16 @@ import { useLocation } from '@/hooks/useLocation';
 
 import styles from './styles.module.scss';
 
+const links = {
+	linkedin: 'https://www.linkedin.com/in/ferbendala/',
+	github: 'https://github.com/FerBendala'
+};
+
 const Header = () => {
 	const { t } = useLocation('translation', { keyPrefix: 'content.header' });
 
-	const links = {
-		linkedin: 'https://www.linkedin.com/in/ferbendala/',
-		github: 'https://github.com/FerBendala'
-	};
-
 	return (
-		<header className={styles.header}>
+		<header id='header' className={styles.header}>
 			<section className={[styles.header__container, styles['header__container--description']].join(' ')}>
 				<h1 className={styles.header__title}>{t('title')}</h1>
 				<p className={styles.header__text}>{t('text')}</p>
@@ -44,7 +44,8 @@ const Header = () => {
 			</section>
 
 			<picture className={styles['header__container--image']}>
-				<img src={photoNextGen} alt='Fernando Bendala' width='304' height='364' loading='lazy' />
+				<source srcSet={photoNextGen} type='image/webp' />
+				<img src={photoNextGen} alt='Fernando Bendala' width='304' height='364' loading='eager' />
 			</picture>
 		</header>
 	);
