@@ -91,7 +91,7 @@ const MenuMobile = () => {
 				<li className={styles.menu__screen__download}>
 					<Button
 						text={t('download_cv')}
-						onClick={() => console.log(t('download_cv'))}
+						onClick={() => window.open('Fernando_Bendala-cv-en.pdf', '_blank')}
 						aria-label={t('download_cv')}
 					/>
 				</li>

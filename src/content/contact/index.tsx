@@ -9,7 +9,7 @@ import Button from '@/components/button';
 import ButtonTextIcon from '@/components/button-text-icon';
 import Heading from '@/components/heading';
 import { useLocation } from '@/hooks/useLocation';
-import personalInfo from '@/location/generic';
+import personalInfo from '@/localization/generic';
 
 import { form } from './form';
 import styles from './styles.module.scss';

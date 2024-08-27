@@ -20,7 +20,7 @@ interface AccordionProps {
 const Accordion = ({ text, isOpen, onToggle, color }: AccordionProps) => {
 	const { t } = useLocation('translation', { keyPrefix: 'components.accordion' });
 	const [height, setHeight] = useState(0);
-	const contentRef = useRef<HTMLParagraphElement>(null);
+	const contentRef = useRef<HTMLDivElement>(null); // Cambiado a div per a múltiples p
 	const isTablet = useMediaQuery({ query: `(max-width: ${media.tablet - 1}px)` });
 
 	useEffect(() => {

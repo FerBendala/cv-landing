@@ -28,7 +28,6 @@ const Menu = () => {
 
 				<MediaQuery minWidth={media.tablet}>
 					<ul className={styles.menu__list}>
-						{/* Page links */}
 						{customLinks.map(({ name, url }) => (
 							<li key={name} className={styles.menu__list__item}>
 								<a href={url} target='_self' className={styles.item__link}>
@@ -37,7 +36,6 @@ const Menu = () => {
 							</li>
 						))}
 
-						{/* Action buttons */}
 						<li className={styles.menu__list__item}>
 							<SelectLanguage />
 							<ButtonIcon
@@ -47,7 +45,7 @@ const Menu = () => {
 							/>
 							<Button
 								text={t('download_cv')}
-								onClick={() => console.log(t('download_cv'))}
+								onClick={() => window.open('Fernando_Bendala-cv-en.pdf', '_blank')}
 								aria-label={t('download_cv')}
 							/>
 						</li>
