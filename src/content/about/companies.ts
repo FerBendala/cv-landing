@@ -1,10 +1,18 @@
 import LogoAxpe from '@image/svg/logo-axpe.svg?react';
 import LogoFXS from '@image/svg/logo-fxstreet.svg?react';
 import LogoInbenta from '@image/svg/logo-inbenta.svg?react';
+import LogoInditex from '@image/svg/logo-inditex.svg?react';
 import LogoIngens from '@image/svg/logo-ingens.svg?react';
 import LogoTiendeo from '@image/svg/logo-tiendeo.svg?react';
 
 const companies = [
+	{
+		Icon: LogoInditex,
+		title: 'inditex.title',
+		duration: 'inditex.duration',
+		company: 'inditex.company',
+		text: 'inditex.text'
+	},
 	{
 		Icon: LogoFXS,
 		title: 'fxstreet.title',

@@ -30,8 +30,9 @@ const en = {
 		},
 		content: {
 			header: {
-				title: 'Hi, I’m Fer Bendala 👋',
-				text: 'I have over 8 years of experience working with Vanilla.js and specialize in React, React Native, and Node.js. I’m passionate about turning ideas into digital realities, but my focus extends beyond development. With over 12 years as a designer, I’ve created digital experiences that are not only functional but also engaging, fast, accessible, and visually impactful.',
+				title: "Hi, I'm Fer Bendala 👋",
+				subtitle: 'Frontend Architect · Tech Lead · Design Systems',
+				text: "I build frontend platforms that scale across teams, focusing on architecture, design systems, performance, and developer experience. My profile moves between engineering and UX/UI design: I've led shared systems, launched products from scratch, and defined standards that enable fast delivery without losing quality.",
 				country: 'Barcelona, Spain',
 				status: 'Available for new projects'
 			},
@@ -41,58 +42,65 @@ const en = {
 			},
 			about: {
 				title: 'About Me',
-				description: 'Here’s a quick summary of my most recent experiences',
+				description:
+					"Here's a summary of my recent career and the type of problems where I usually add the most value",
+				inditex: {
+					title: 'Frontend Lead',
+					duration: 'Currently - since January 2025',
+					company: 'Inditex (via Kelea)',
+					text: 'I lead frontend architecture in global enterprise platforms, making structural decisions and defining shared standards across teams. I stay involved at the technical level when needed, working in multi-team contexts and ensuring that shared frontend systems scale correctly in performance, maintainability, and developer experience.'
+				},
 				fxstreet: {
-					title: 'Senior Frontend Developer',
-					duration: 'Currently - since October 2023',
+					title: 'Frontend Lead',
+					duration: 'From October 2023 to December 2024',
 					company: 'FXStreet',
-					text: 'I have led the team in implementing advanced technological solutions, ensuring code quality through thorough reviews and applying best practices in architecture and design, always seeking to utilize the latest technologies. I have closely collaborated with design, product, and QA teams, promoting innovation and continuous improvement in product development.Additionally, my work includes project management, ensuring the efficient and timely delivery of all initiatives.'
+					text: 'Responsible for the architecture and frontend development of a mobile-first product built from scratch. I defined the technical foundation, quality criteria, and navigation structure, combining best practices in architecture and design. I collaborated closely with design, product, and QA to ensure consistent delivery, keeping focus on performance, maintainability, and team iteration capacity.'
 				},
 				tiendeo: {
-					title: 'Senior Frontend Developer',
-					duration: '3 years - from November 2020 to October 2023',
+					title: 'Frontend Lead & Design Systems UX/UI Designer',
+					duration: 'From November 2020 to October 2023',
 					company: 'Tiendeo',
-					text: 'I combined my technical knowledge with a creative approach to lead the development of attractive and functional interfaces. I implemented efficient architectures and designs, optimizing collaboration between backend, design, product, and QA teams. Additionally, I drove innovation within the team, promoting the adoption of new technologies and work methodologies that improved development efficiency and the quality of the final product.'
+					text: 'I led the development of design systems and shared frontend architectures, combining technical vision and UX/UI design. I defined reusable standards, scalable flows, and creative automation processes that significantly reduced production times (around 80% in specific cases). My role focused on improving collaboration between teams without compromising quality or delivery speed.'
 				},
 				axpe: {
-					title: 'Senior Frontend Developer',
-					duration: '~2 years - from July 2019 to October 2020',
-					company: 'Axpe',
-					text: 'I worked on implementing user interfaces, ensuring they were responsive and optimized for performance. I conducted cross-browser compatibility testing and debugged issues to ensure a smooth user experience. I participated in creating high-fidelity Wireframes and Prototypes, as well as collaborating on user research and accessibility, ensuring that developed solutions met user needs and expectations.'
+					title: 'Frontend Developer & UX/UI Designer',
+					duration: 'From July 2019 to October 2020',
+					company: 'Axpe Consulting',
+					text: 'I participated in client projects developing frontend interfaces and UX/UI solutions, working in coordination with design, product, and backend. I focused on building maintainable and coherent interfaces, solving UI problems, and laying solid technical foundations adapted to each context.'
 				},
 				inbenta: {
-					title: 'Senior Frontend Developer',
-					duration: '3 years - from March 2016 to May 2019',
+					title: 'Frontend Developer & UX/UI Designer',
+					duration: 'From March 2016 to May 2019',
 					company: 'Inbenta',
-					text: 'I carried out the implementation of efficient and adaptive user interfaces, focusing on performance optimization and cross-browser compatibility. I contributed to user research and the creation of Wireframes and Prototypes, enhancing the user experience across all platforms. Additionally, I ensured that all developed solutions were accessible and easy to use, meeting high standards of design and interactivity.'
+					text: 'I worked on product-oriented web interface development, combining frontend and UX/UI design. I defined style patterns and reusable components, improving visual consistency and frontend scalability across different products and platforms.'
 				},
 				ingens: {
-					title: 'Senior Frontend Developer',
-					duration: '~2 years - from December 2012 to October 2014',
-					company: 'Ingens',
-					text: 'I was responsible for designing and implementing user interfaces, ensuring they were visually appealing, adaptable to different devices, and compatible with various browsers. My work included optimizing visual performance and improving accessibility, ensuring that products were inclusive and provided an exceptional user experience. Additionally, I collaborated on user research and usability problem-solving, contributing to the delivery of high-quality final products.'
+					title: 'UI Designer',
+					duration: 'From December 2012 to October 2014',
+					company: 'Ingens Networks',
+					text: 'Responsible for interface design and visual pieces for product, working on UI, motion, rendering, and graphic design. This stage laid the foundations of my visual and interaction criteria, which I later transferred to frontend development and design systems creation.'
 				}
 			},
 			work: {
 				title: 'Work',
-				description: 'Some of the most notable projects I’ve built',
+				description: 'Some of the most notable projects I have built',
 				fxs_app: {
 					title: 'FXStreet App',
-					text: 'I was responsible for leading the frontend development team and acted as a liaison between design, development, and backend. I created the main structure using Expo, React Native, and Tailwind. Additionally, I conducted user testing and unit testing with Jest.'
+					text: 'I led the frontend of a mobile-first app and was the liaison between design, product, and backend. I defined the base architecture and component system with Expo, React Native, and Tailwind, ensuring a maintainable foundation to iterate quickly with quality (Jest tests and user validation).'
 				},
 				fxs_landing: {
 					title: 'FXStreet Premium Landing',
-					text: 'I was responsible for leading the frontend development team and acted as a liaison between design, development, and backend. I created the main structure using the appropriate technologies and updated the project technologies. Storybook and React were used to develop a template system for the Premium section landing pages of FXStreet.'
+					text: 'I defined a template and component system for Premium landings, reducing delivery friction and improving consistency. We worked with React and Storybook, standardizing patterns so the team could scale pages without reinventing the wheel.'
 				},
 				shopfully_website: {
 					title: 'Shopfully Website',
-					text: 'I was responsible for leading the development team and created the necessary designs to adapt to the client’s needs. I built the main structure with WordPress, PHP, Vanilla.js, and SCSS, as well as a plugin system for Shopfully editors to manage content.'
+					text: 'I led the development and design of the website, building a solid foundation in WordPress/PHP with Vanilla.js and SCSS. I implemented a plugin system so the editorial team could manage content autonomously without breaking consistency.'
 				}
 			},
 			contact: {
 				title: 'Get in Touch',
 				description:
-					'What’s next? Feel free to contact me if you’re looking for a developer, have any questions, or just want to connect.',
+					"What's next? Feel free to contact me if you're looking for a developer, have any questions, or just want to connect.",
 				name: 'Name',
 				email: 'Email',
 				phone: 'Phone',
@@ -102,7 +110,7 @@ const en = {
 				send: 'Send message'
 			},
 			footer: {
-				text: '2024 | Designed and coded with ❤️️ by Fernando Bendala'
+				text: '2026 | Designed and coded with ❤️️ by Fernando Bendala'
 			}
 		}
 	}

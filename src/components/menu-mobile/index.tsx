@@ -16,7 +16,7 @@ import { useThemeStore } from '@/stores/theme.store';
 import styles from './styles.module.scss';
 
 const MenuMobile = () => {
-	const { t } = useLocation('translation', { keyPrefix: 'components.menu' });
+	const { t, language } = useLocation('translation', { keyPrefix: 'components.menu' });
 	const { theme, setTheme } = useThemeStore();
 
 	const [visible, setVisible] = useState(false);
@@ -27,6 +27,7 @@ const MenuMobile = () => {
 	}, [visible]);
 
 	const themeButtonText = theme === 'dark' ? t('switch_to_light_theme') : t('switch_to_dark_theme');
+	const cvFile = language === 'en' ? 'Fernando_Bendala-cv-en.pdf' : 'Fernando_Bendala-cv-es.pdf';
 
 	return (
 		<nav className={styles.menu}>
@@ -91,7 +92,7 @@ const MenuMobile = () => {
 				<li className={styles.menu__screen__download}>
 					<Button
 						text={t('download_cv')}
-						onClick={() => window.open('Fernando_Bendala-cv-en.pdf', '_blank')}
+						onClick={() => window.open(cvFile, '_blank')}
 						aria-label={t('download_cv')}
 					/>
 				</li>

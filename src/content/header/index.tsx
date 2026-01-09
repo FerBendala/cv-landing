@@ -20,6 +20,7 @@ const Header = () => {
 		<header id='header' className={styles.header}>
 			<section className={[styles.header__container, styles['header__container--description']].join(' ')}>
 				<h1 className={styles.header__title}>{t('title')}</h1>
+				<p className={styles.header__subtitle}>{t('subtitle')}</p>
 				<p className={styles.header__text}>{t('text')}</p>
 			</section>
 

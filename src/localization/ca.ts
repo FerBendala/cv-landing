@@ -31,7 +31,8 @@ const ca = {
 		content: {
 			header: {
 				title: 'Hola, sóc Fer Bendala 👋',
-				text: 'Tinc més de 8 anys d’experiència treballant amb Vanilla.js i em specialitzo en React, React Native i Node.js. M’apassiona convertir idees en realitats digitals, però el meu enfocament va més enllà del desenvolupament. Amb més de 12 anys com a dissenyador, he creat experiències digitals que no només són funcionals, sinó també atractives, ràpides, accessibles i visualment impactants.',
+				subtitle: 'Frontend Architect · Tech Lead · Design Systems',
+				text: "Construeixo plataformes frontend que escalen entre equips, amb focus en arquitectura, sistemes de disseny, rendiment i experiència de desenvolupament. El meu perfil es mou entre l'enginyeria i el disseny UX/UI: he liderat sistemes compartits, llançat productes des de zero i definit estàndards que permeten entregar ràpid sense perdre qualitat.",
 				country: 'Barcelona, Espanya',
 				status: 'Disponible per a nous projectes'
 			},
@@ -41,36 +42,43 @@ const ca = {
 			},
 			about: {
 				title: 'Sobre mi',
-				description: 'Aquí tens un resum ràpid de les meves experiències més recents',
+				description:
+					'Aquí tens un resum de la meva trajectòria recent i del tipus de problemes en què acostumo a aportar més valor',
+				inditex: {
+					title: 'Frontend Lead',
+					duration: 'Actualment - des de gener de 2025',
+					company: 'Inditex (a través de Kelea)',
+					text: "Lidero l'arquitectura frontend en plataformes enterprise globals, prenent decisions estructurals i definint estàndards compartits entre equips. Em mantinc implicat a nivell tècnic quan és necessari, treballant en contextos multiequip i assegurant que els sistemes frontend compartits escalin correctament en rendiment, mantenibilitat i experiència de desenvolupament."
+				},
 				fxstreet: {
-					title: 'Sr. Desenvolupador Frontend',
-					duration: 'Actualment - des d’octubre de 2023',
+					title: 'Frontend Lead',
+					duration: "D'octubre de 2023 a desembre de 2024",
 					company: 'FXStreet',
-					text: 'He liderat l’equip en la implementació de solucions tecnològiques avançades, assegurant la qualitat del codi mitjançant revisions exhaustives i aplicant les millors pràctiques d’arquitectura i disseny, sempre buscant utilitzar les últimes tecnologies. He col·laborat estretament amb els equips de disseny, producte i QA, promovent la innovació i la millora contínua en el desenvolupament de productes. A més, el meu treball inclou la gestió de projectes, garantint l’entrega eficient i puntual de totes les iniciatives.'
+					text: "Responsable de l'arquitectura i del desenvolupament frontend d'un producte mobile-first construït des de zero. Vaig definir la base tècnica, els criteris de qualitat i l'estructura de navegació, combinant bones pràctiques d'arquitectura i disseny. Vaig col·laborar estretament amb disseny, producte i QA per assegurar una entrega consistent, mantenint el focus en rendiment, mantenibilitat i capacitat d'iteració de l'equip."
 				},
 				tiendeo: {
-					title: 'Sr. Desenvolupador Frontend',
-					duration: '3 anys - de novembre de 2020 a octubre de 2023',
+					title: 'Frontend Lead i Dissenyador UX/UI de Sistemes',
+					duration: 'De novembre de 2020 a octubre de 2023',
 					company: 'Tiendeo',
-					text: 'He combinat el meu coneixement tècnic amb un enfocament creatiu per liderar el desenvolupament d’interfícies atractives i funcionals. He implementat arquitectures i dissenys eficients, optimitzant la col·laboració entre els equips de backend, disseny, producte i QA. A més, he impulsat la innovació dins de l’equip, promovent l’adopció de noves tecnologies i metodologies de treball que han millorat l’eficiència del desenvolupament i la qualitat del producte final.'
+					text: "Vaig liderar el desenvolupament de sistemes de disseny i arquitectures frontend compartides, combinant visió tècnica i disseny UX/UI. Vaig definir estàndards reutilitzables, fluxos escalables i processos d'automatització creativa que van reduir significativament els temps de producció (al voltant d'un 80% en casos concrets). El meu rol va estar centrat a millorar la col·laboració entre equips sense comprometre qualitat ni velocitat d'entrega."
 				},
 				axpe: {
-					title: 'Sr. Desenvolupador Frontend',
-					duration: '~2 anys - de juliol de 2019 a octubre de 2020',
-					company: 'Axpe',
-					text: 'He treballat en la implementació d’interfícies d’usuari, assegurant-me que siguin responsive i optimitzades per al rendiment. He realitzat proves de compatibilitat entre navegadors i he solucionat problemes de debugging per garantir una experiència d’usuari fluida. He participat en la creació de Wireframes i Prototips d’alta fidelitat, a més de col·laborar en la investigació d’usuaris i l’accessibilitat, assegurant que les solucions desenvolupades compleixin amb les necessitats i expectatives dels usuaris.'
+					title: 'Desenvolupador Frontend i Dissenyador UX/UI',
+					duration: 'De juliol de 2019 a octubre de 2020',
+					company: 'Axpe Consulting',
+					text: "Vaig participar en projectes per a clients desenvolupant interfícies frontend i solucions UX/UI, treballant de forma coordinada amb disseny, producte i backend. Em vaig enfocar a construir interfícies mantenibles i coherents, resolent problemes d'UI i establint bases tècniques sòlides adaptades a cada context."
 				},
 				inbenta: {
-					title: 'Sr. Desenvolupador Frontend',
-					duration: '3 anys - de març de 2016 a maig de 2019',
+					title: 'Desenvolupador Frontend i Dissenyador UX/UI',
+					duration: 'De març de 2016 a maig de 2019',
 					company: 'Inbenta',
-					text: 'He realitzat la implementació d’interfícies d’usuari eficients i adaptatives, centrant-me en l’optimització del rendiment i la compatibilitat entre navegadors. He contribuït en la investigació d’usuaris i en la creació de Wireframes i Prototips, millorant l’experiència d’usuari en totes les plataformes. A més, he garantit que totes les solucions desenvolupades siguin accessibles i fàcils d’utilitzar, complint amb alts estàndards de disseny i interactivitat.'
+					text: "Vaig treballar en el desenvolupament d'interfícies web orientades a producte, combinant frontend i disseny UX/UI. Vaig definir patrons d'estils i components reutilitzables, millorant la consistència visual i l'escalabilitat del frontend en diferents productes i plataformes."
 				},
 				ingens: {
-					title: 'Sr. Desenvolupador Frontend',
-					duration: '~2 anys - de desembre de 2012 a octubre de 2014',
-					company: 'Ingens',
-					text: 'He estat responsable del disseny i la implementació d’interfícies d’usuari, assegurant-me que siguin visualment atractives, adaptables a diferents dispositius i compatibles amb diversos navegadors. El meu treball incloïa l’optimització del rendiment visual i la millora de l’accessibilitat, garantint que els productes siguin inclusius i ofereixin una experiència d’usuari excepcional. A més, he col·laborat en la investigació d’usuaris i en la resolució de problemes d’usabilitat, contribuint a l’entrega de productes finals d’alta qualitat.'
+					title: 'Dissenyador UI',
+					duration: 'De desembre de 2012 a octubre de 2014',
+					company: 'Ingens Networks',
+					text: "Responsable del disseny d'interfícies i peces visuals per a producte, treballant en UI, motion, renderitzat i disseny gràfic. Aquesta etapa va establir les bases del meu criteri visual i d'interacció, que més endavant vaig traslladar al desenvolupament frontend i a la creació de sistemes de disseny."
 				}
 			},
 			work: {
@@ -78,15 +86,15 @@ const ca = {
 				description: 'Alguns dels projectes més destacats que he construït',
 				fxs_app: {
 					title: 'FXStreet App',
-					text: 'Vaig ser responsable de liderar l’equip de desenvolupament frontend i vaig actuar com a nexe entre disseny, desenvolupament i backend. Vaig crear l’estructura principal utilitzant Expo, React Native i Tailwind. A més, vaig realitzar proves d’usuaris i proves unitàries amb Jest.'
+					text: "Vaig liderar el frontend d'una app mobile-first i vaig ser el nexe entre disseny, producte i backend. Vaig definir l'arquitectura base i el sistema de components amb Expo, React Native i Tailwind, assegurant una base mantenible per iterar ràpid amb qualitat (tests amb Jest i validació amb usuaris)."
 				},
 				fxs_landing: {
 					title: 'FXStreet Premium Landing',
-					text: 'Vaig ser responsable de liderar l’equip de desenvolupament frontend i vaig actuar com a nexe entre disseny, desenvolupament i backend. Vaig crear l’estructura principal utilitzant les tecnologies adequades i vaig actualitzar les tecnologies del projecte. Es van utilitzar Storybook i React per desenvolupar un sistema de plantilles per a les pàgines de destinació de la secció Premium de FXStreet.'
+					text: "Vaig definir un sistema de plantilles i components per a les landings de Premium, reduint fricció en el delivery i millorant consistència. Es va treballar amb React i Storybook, estandarditzant patrons perquè l'equip pogués escalar pàgines sense reinventar la roda."
 				},
 				shopfully_website: {
 					title: 'Shopfully Website',
-					text: 'Vaig ser responsable de liderar l’equip de desenvolupament i vaig realitzar els dissenys necessaris per adaptar-me a les necessitats del client. Vaig construir l’estructura principal amb WordPress, PHP, Vanilla.js i SCSS, així com un sistema de plugins perquè els editors de Shopfully poguessin gestionar el contingut.'
+					text: "Vaig liderar el desenvolupament i el disseny de la web, construint una base sòlida en WordPress/PHP amb Vanilla.js i SCSS. Vaig implementar un sistema de plugins perquè l'equip editorial pogués gestionar contingut amb autonomia sense trencar consistència."
 				}
 			},
 			contact: {
@@ -102,7 +110,7 @@ const ca = {
 				send: 'Envia missatge'
 			},
 			footer: {
-				text: '2024 | Dissenyat i codificat amb ❤️️ per Fernando Bendala'
+				text: '2026 | Dissenyat i codificat amb ❤️️ per Fernando Bendala'
 			}
 		}
 	}

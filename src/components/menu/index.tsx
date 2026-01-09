@@ -16,8 +16,10 @@ import { useThemeStore } from '@/stores/theme.store';
 import styles from './style.module.scss';
 
 const Menu = () => {
-	const { t } = useLocation('translation', { keyPrefix: 'components.menu' });
+	const { t, language } = useLocation('translation', { keyPrefix: 'components.menu' });
 	const { theme, setTheme } = useThemeStore();
+
+	const cvFile = language === 'en' ? 'Fernando_Bendala-cv-en.pdf' : 'Fernando_Bendala-cv-es.pdf';
 
 	return (
 		<nav className={styles.menu}>
@@ -45,7 +47,7 @@ const Menu = () => {
 							/>
 							<Button
 								text={t('download_cv')}
-								onClick={() => window.open('Fernando_Bendala-cv-en.pdf', '_blank')}
+								onClick={() => window.open(cvFile, '_blank')}
 								aria-label={t('download_cv')}
 							/>
 						</li>

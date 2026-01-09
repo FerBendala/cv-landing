@@ -49,6 +49,12 @@
 		line-height: 1.12;
 	}
 
+	&__subtitle {
+		font-size: f.em(20);
+		font-weight: 500;
+		color: var(--color-only-pink-100);
+	}
+
 	&__info {
 		@include m.flex($ai: center, $gap: f.em(8));
 	}
