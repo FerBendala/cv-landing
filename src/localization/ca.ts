@@ -92,6 +92,14 @@ const ca = {
 					title: 'FXStreet Premium Landing',
 					text: "Vaig definir un sistema de plantilles i components per a les landings de Premium, reduint fricció en el delivery i millorant consistència. Es va treballar amb React i Storybook, estandarditzant patrons perquè l'equip pogués escalar pàgines sense reinventar la roda."
 				},
+				fxs_web: {
+					title: 'FXStreet Website',
+					text: "Em vaig encarregar del manteniment i desenvolupament de noves funcionalitats, així com de l'estructura d'estils amb Sass. Vaig treballar en millorar l'arquitectura CSS i en assegurar la coherència visual a tot el lloc."
+				},
+				tiendeo_web: {
+					title: 'Tiendeo Website',
+					text: "Em vaig encarregar del manteniment de la web i de millores en el visor de catàlegs, optimitzant l'experiència d'usuari i el rendiment de la plataforma."
+				},
 				shopfully_website: {
 					title: 'Shopfully Website',
 					text: "Vaig liderar el desenvolupament i el disseny de la web, construint una base sòlida en WordPress/PHP amb Vanilla.js i SCSS. Vaig implementar un sistema de plugins perquè l'equip editorial pogués gestionar contingut amb autonomia sense trencar consistència."

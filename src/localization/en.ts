@@ -92,6 +92,14 @@ const en = {
 					title: 'FXStreet Premium Landing',
 					text: 'I defined a template and component system for Premium landings, reducing delivery friction and improving consistency. We worked with React and Storybook, standardizing patterns so the team could scale pages without reinventing the wheel.'
 				},
+				fxs_web: {
+					title: 'FXStreet Website',
+					text: 'I was in charge of maintenance and development of new features, as well as the Sass styling structure. I worked on improving the CSS architecture and ensuring visual consistency across the entire site.'
+				},
+				tiendeo_web: {
+					title: 'Tiendeo Website',
+					text: 'I was in charge of website maintenance and improvements to the catalog viewer, optimizing user experience and platform performance.'
+				},
 				shopfully_website: {
 					title: 'Shopfully Website',
 					text: 'I led the development and design of the website, building a solid foundation in WordPress/PHP with Vanilla.js and SCSS. I implemented a plugin system so the editorial team could manage content autonomously without breaking consistency.'

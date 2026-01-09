@@ -40,6 +40,8 @@
 				width: 100%;
 				border-radius: f.em(16);
 				box-shadow: var(--box-shadow);
+				object-fit: cover;
+				object-position: top;
 
 				transition: var(--transition-low);
 			}

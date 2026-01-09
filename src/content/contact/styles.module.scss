@@ -14,7 +14,7 @@
 	}
 
 	&__form {
-		@include m.grid($gc: repeat(2, minmax(0, 1fr)), $gap: f.em(16));
+		@include m.grid($gc: repeat(2, minmax(0, 1fr)), $gap: f.em(16) f.em(12));
 
 		padding: f.em(48);
 		border-radius: f.em(16);
@@ -31,7 +31,7 @@
 
 		&__label {
 			@include m.position(relative);
-			@include m.flex($fd: column, $gap: f.em(8));
+			@include m.flex($fd: column);
 
 			overflow: hidden;
 

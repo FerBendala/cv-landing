@@ -92,6 +92,14 @@ const es = {
 					title: 'FXStreet Premium Landing',
 					text: 'Definí un sistema de plantillas y componentes para las landings de Premium, reduciendo fricción en el delivery y mejorando consistencia. Se trabajó con React y Storybook, estandarizando patrones para que el equipo pudiera escalar páginas sin reinventar la rueda.'
 				},
+				fxs_web: {
+					title: 'FXStreet Website',
+					text: 'Me encargué del mantenimiento y desarrollo de nuevas funcionalidades, así como de la estructura de estilos con Sass. Trabajé en mejorar la arquitectura CSS y en asegurar la coherencia visual en todo el sitio.'
+				},
+				tiendeo_web: {
+					title: 'Tiendeo Website',
+					text: 'Me encargué del mantenimiento de la web y de mejoras en el visor de catálogos, optimizando la experiencia de usuario y el rendimiento de la plataforma.'
+				},
 				shopfully_website: {
 					title: 'Shopfully Website',
 					text: 'Lideré el desarrollo y el diseño de la web, construyendo una base sólida en WordPress/PHP con Vanilla.js y SCSS. Implementé un sistema de plugins para que el equipo editorial pudiera gestionar contenido con autonomía sin romper consistencia.'
