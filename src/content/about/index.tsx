@@ -45,6 +45,7 @@ const About = () => {
 						</section>
 					</article>
 				))}
+				<p className={styles.about__closing}>{t('closing')}</p>
 			</div>
 		</section>
 	);

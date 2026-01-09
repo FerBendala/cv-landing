@@ -36,10 +36,16 @@ const en = {
 				country: 'Barcelona, Spain',
 				status: 'Available for new projects'
 			},
-			skills: {
-				title: 'Skills',
-				description: 'The skills, tools, and technologies I love'
-			},
+		skills: {
+			title: 'Skills',
+			description: 'The skills, tools, and technologies I love',
+			categories: {
+				architecture: 'Architecture & Frontend Systems',
+				styling: 'UI & Styling',
+				productivity: 'Productivity & DX',
+				design: 'Design & UX/UI'
+			}
+		},
 			about: {
 				title: 'About Me',
 				description:
@@ -62,24 +68,25 @@ const en = {
 					company: 'Tiendeo',
 					text: 'I led the development of design systems and shared frontend architectures, combining technical vision and UX/UI design. I defined reusable standards, scalable flows, and creative automation processes that significantly reduced production times (around 80% in specific cases). My role focused on improving collaboration between teams without compromising quality or delivery speed.'
 				},
-				axpe: {
-					title: 'Frontend Developer & UX/UI Designer',
-					duration: 'From July 2019 to October 2020',
-					company: 'Axpe Consulting',
-					text: 'I participated in client projects developing frontend interfaces and UX/UI solutions, working in coordination with design, product, and backend. I focused on building maintainable and coherent interfaces, solving UI problems, and laying solid technical foundations adapted to each context.'
-				},
-				inbenta: {
-					title: 'Frontend Developer & UX/UI Designer',
-					duration: 'From March 2016 to May 2019',
-					company: 'Inbenta',
-					text: 'I worked on product-oriented web interface development, combining frontend and UX/UI design. I defined style patterns and reusable components, improving visual consistency and frontend scalability across different products and platforms.'
-				},
-				ingens: {
-					title: 'UI Designer',
-					duration: 'From December 2012 to October 2014',
-					company: 'Ingens Networks',
-					text: 'Responsible for interface design and visual pieces for product, working on UI, motion, rendering, and graphic design. This stage laid the foundations of my visual and interaction criteria, which I later transferred to frontend development and design systems creation.'
-				}
+			axpe: {
+				title: 'Frontend Developer & UX/UI Designer',
+				duration: 'From July 2019 to October 2020',
+				company: 'Axpe Consulting',
+				text: 'I worked on client projects combining frontend and UX/UI, adapting technical solutions to different contexts and laying solid foundations in maintainability and collaboration with design and backend.'
+			},
+			inbenta: {
+				title: 'Frontend Developer & UX/UI Designer',
+				duration: 'From March 2016 to May 2019',
+				company: 'Inbenta',
+				text: 'I contributed to the development of product-oriented interfaces, defining style patterns and reusable components that facilitated frontend evolution across different products and platforms.'
+			},
+			ingens: {
+				title: 'UI Designer',
+				duration: 'From December 2012 to October 2014',
+				company: 'Ingens Networks',
+				text: 'A stage focused on UI design, motion, and visual systems, which shaped my interaction and consistency criteria that I later transferred to frontend development and design systems creation.'
+			},
+			closing: 'I especially enjoy working on systems where architecture, design, and development reinforce each other rather than compete.'
 			},
 			work: {
 				title: 'Work',
@@ -92,14 +99,14 @@ const en = {
 					title: 'FXStreet Premium Landing',
 					text: 'I defined a template and component system for Premium landings, reducing delivery friction and improving consistency. We worked with React and Storybook, standardizing patterns so the team could scale pages without reinventing the wheel.'
 				},
-				fxs_web: {
-					title: 'FXStreet Website',
-					text: 'I was in charge of maintenance and development of new features, as well as the Sass styling structure. I worked on improving the CSS architecture and ensuring visual consistency across the entire site.'
-				},
-				tiendeo_web: {
-					title: 'Tiendeo Website',
-					text: 'I was in charge of website maintenance and improvements to the catalog viewer, optimizing user experience and platform performance.'
-				},
+			fxs_web: {
+				title: 'FXStreet Website',
+				text: 'I participated in the frontend evolution of the site, improving the Sass styling architecture, reinforcing visual coherence, and ensuring a more maintainable and consistent foundation for the long term.'
+			},
+			tiendeo_web: {
+				title: 'Tiendeo Website',
+				text: 'I worked on stabilizing and improving the site frontend, optimizing the catalog viewer and overall platform performance, with a focus on user experience and technical sustainability.'
+			},
 				shopfully_website: {
 					title: 'Shopfully Website',
 					text: 'I led the development and design of the website, building a solid foundation in WordPress/PHP with Vanilla.js and SCSS. I implemented a plugin system so the editorial team could manage content autonomously without breaking consistency.'

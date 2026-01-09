@@ -38,7 +38,13 @@ const ca = {
 			},
 			skills: {
 				title: 'Habilitats',
-				description: 'Les habilitats, eines i tecnologies que m’encanten'
+				description: "Les habilitats, eines i tecnologies que m'encanten",
+				categories: {
+					architecture: 'Arquitectura & Sistemes Frontend',
+					styling: 'UI & Styling',
+					productivity: 'Productivitat & DX',
+					design: 'Disseny & UX/UI'
+				}
 			},
 			about: {
 				title: 'Sobre mi',
@@ -66,20 +72,22 @@ const ca = {
 					title: 'Desenvolupador Frontend i Dissenyador UX/UI',
 					duration: 'De juliol de 2019 a octubre de 2020',
 					company: 'Axpe Consulting',
-					text: "Vaig participar en projectes per a clients desenvolupant interfícies frontend i solucions UX/UI, treballant de forma coordinada amb disseny, producte i backend. Em vaig enfocar a construir interfícies mantenibles i coherents, resolent problemes d'UI i establint bases tècniques sòlides adaptades a cada context."
+					text: 'Vaig treballar en projectes per a clients combinant frontend i UX/UI, adaptant solucions tècniques a contextos diferents i establint bases sòlides de mantenibilitat i col·laboració amb disseny i backend.'
 				},
 				inbenta: {
 					title: 'Desenvolupador Frontend i Dissenyador UX/UI',
 					duration: 'De març de 2016 a maig de 2019',
 					company: 'Inbenta',
-					text: "Vaig treballar en el desenvolupament d'interfícies web orientades a producte, combinant frontend i disseny UX/UI. Vaig definir patrons d'estils i components reutilitzables, millorant la consistència visual i l'escalabilitat del frontend en diferents productes i plataformes."
+					text: "Vaig contribuir al desenvolupament d'interfícies orientades a producte, definint patrons d'estils i components reutilitzables que van facilitar l'evolució del frontend en diferents productes i plataformes."
 				},
 				ingens: {
 					title: 'Dissenyador UI',
 					duration: 'De desembre de 2012 a octubre de 2014',
 					company: 'Ingens Networks',
-					text: "Responsable del disseny d'interfícies i peces visuals per a producte, treballant en UI, motion, renderitzat i disseny gràfic. Aquesta etapa va establir les bases del meu criteri visual i d'interacció, que més endavant vaig traslladar al desenvolupament frontend i a la creació de sistemes de disseny."
-				}
+					text: "Etapa centrada en disseny UI, motion i sistemes visuals, que va definir el meu criteri d'interacció i consistència, i que més endavant vaig traslladar al desenvolupament frontend i a sistemes de disseny."
+				},
+				closing:
+					"M'agrada especialment treballar en sistemes on arquitectura, disseny i desenvolupament no competeixen entre si, sinó que es reforcen."
 			},
 			work: {
 				title: 'Treball',
@@ -94,11 +102,11 @@ const ca = {
 				},
 				fxs_web: {
 					title: 'FXStreet Website',
-					text: "Em vaig encarregar del manteniment i desenvolupament de noves funcionalitats, així com de l'estructura d'estils amb Sass. Vaig treballar en millorar l'arquitectura CSS i en assegurar la coherència visual a tot el lloc."
+					text: "Vaig participar en l'evolució del frontend del lloc, millorant l'arquitectura d'estils amb Sass, reforçant la coherència visual i assegurant una base més mantenible i consistent a llarg termini."
 				},
 				tiendeo_web: {
 					title: 'Tiendeo Website',
-					text: "Em vaig encarregar del manteniment de la web i de millores en el visor de catàlegs, optimitzant l'experiència d'usuari i el rendiment de la plataforma."
+					text: "Vaig treballar en l'estabilització i millora del frontend del lloc, optimitzant el visor de catàlegs i el rendiment general de la plataforma, amb focus en experiència d'usuari i sostenibilitat tècnica."
 				},
 				shopfully_website: {
 					title: 'Shopfully Website',
