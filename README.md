@@ -1,30 +1,66 @@
-# React + TypeScript + Vite
+# Fernando Bendala - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website showcasing my work as a Frontend Architect & Tech Lead.
 
-Currently, two official plugins are available:
+**Live site:** [ferbendala.dev](https://ferbendala.dev)
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework:** React 18 + TypeScript
+- **Build:** Vite
+- **Styling:** Sass/SCSS Modules
+- **i18n:** react-i18next (EN/ES/CA)
+- **State:** Zustand
+- **Forms:** EmailJS
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
--   Configure the top-level `parserOptions` property like this:
+- Multi-language support (English, Spanish, Catalan)
+- Dark/Light theme
+- Responsive design
+- SEO optimized (Open Graph, Twitter Cards, sitemap)
+- Performance optimized (WebP images, font subsetting)
 
-```js
-export default {
-	// other rules...
-	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
-		project: ['./tsconfig.json', './tsconfig.node.json'],
-		tsconfigRootDir: __dirname
-	}
-};
+## Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm start
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
 ```
 
--   Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
--   Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Project Structure
+
+```
+src/
+├── assets/
+│   ├── fonts/          # Poppins font files
+│   ├── images/
+│   │   ├── svg/        # Icons and logos
+│   │   └── webp/       # Optimized images
+│   └── scss/           # Global styles, mixins, variables
+├── components/         # Reusable UI components
+├── content/            # Page sections (Header, Skills, About, Work, Contact)
+├── hooks/              # Custom React hooks
+├── localization/       # i18n translations (en, es, ca)
+└── stores/             # Zustand stores (theme, language)
+
+public/
+├── favicon.svg
+├── og-image.jpg        # Social media preview
+├── robots.txt
+├── sitemap.xml
+└── *.pdf               # CV downloads
+```
+
+## License
+
+MIT
