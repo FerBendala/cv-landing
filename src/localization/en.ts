@@ -32,18 +32,18 @@ const en = {
 			header: {
 				title: "Hi, I'm Fer Bendala 👋",
 				subtitle: 'Frontend Architect · Tech Lead · Design Systems',
-				text: "I build frontend platforms that scale across teams, focusing on architecture, design systems, performance, and developer experience. My profile moves between engineering and UX/UI design: I've led shared systems, launched products from scratch, and defined standards that enable fast delivery without losing quality.",
+				text: "I build frontend platforms that scale across teams, with a strong focus on architecture, design systems, and long-term maintainability. My profile moves between engineering and UX/UI design: I've led shared systems, launched products from scratch, and defined standards that enable fast delivery without losing quality.",
 				country: 'Barcelona, Spain',
-				status: 'Available for new projects'
+				status: 'Available for Frontend Architect / Tech Lead roles'
 			},
 		skills: {
 			title: 'Skills',
-			description: 'The skills, tools, and technologies I love',
+			description: 'Core skills and systems I work with',
 			categories: {
 				architecture: 'Architecture & Frontend Systems',
 				styling: 'UI & Styling',
 				productivity: 'Productivity & DX',
-				design: 'Design & UX/UI'
+				design: 'Design Foundations'
 			}
 		},
 			about: {
@@ -54,7 +54,7 @@ const en = {
 					title: 'Frontend Lead',
 					duration: 'Currently - since January 2025',
 					company: 'Inditex (via Kelea)',
-					text: 'I lead frontend architecture in global enterprise platforms, making structural decisions and defining shared standards across teams. I stay involved at the technical level when needed, working in multi-team contexts and ensuring that shared frontend systems scale correctly in performance, maintainability, and developer experience.'
+					text: 'I lead frontend architecture in global enterprise platforms, focusing on shared systems, structural decisions, and standards that allow teams to scale without losing quality or clarity. I stay involved at the technical level when needed, working in multi-team contexts and ensuring that shared frontend systems scale correctly in performance, maintainability, and developer experience.'
 				},
 				fxstreet: {
 					title: 'Frontend Lead',
@@ -115,7 +115,7 @@ const en = {
 			contact: {
 				title: 'Get in Touch',
 				description:
-					"What's next? Feel free to contact me if you're looking for a developer, have any questions, or just want to connect.",
+					"What's next? Feel free to contact me if you're looking for a Frontend Architect or Tech Lead, have any questions, or just want to connect.",
 				name: 'Name',
 				email: 'Email',
 				phone: 'Phone',

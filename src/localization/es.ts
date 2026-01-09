@@ -32,18 +32,18 @@ const es = {
 			header: {
 				title: 'Hola, soy Fer Bendala 👋',
 				subtitle: 'Frontend Architect · Tech Lead · Design Systems',
-				text: 'Construyo plataformas frontend que escalan entre equipos, con foco en arquitectura, sistemas de diseño, rendimiento y experiencia de desarrollo. Mi perfil se mueve entre la ingeniería y el diseño UX/UI: he liderado sistemas compartidos, lanzado productos desde cero y definido estándares que permiten entregar rápido sin perder calidad.',
+				text: 'Construyo plataformas frontend que escalan entre equipos, con foco en arquitectura, sistemas de diseño y mantenibilidad a largo plazo. Mi perfil se mueve entre la ingeniería y el diseño UX/UI: he liderado sistemas compartidos, lanzado productos desde cero y definido estándares que permiten entregar rápido sin perder calidad.',
 				country: 'Barcelona, España',
-				status: 'Disponible para nuevos proyectos'
+				status: 'Disponible para roles de Frontend Architect / Tech Lead'
 			},
 		skills: {
 			title: 'Habilidades',
-			description: 'Las habilidades, herramientas y tecnologías que me encantan',
+			description: 'Skills y sistemas con los que trabajo',
 			categories: {
 				architecture: 'Arquitectura & Sistemas Frontend',
 				styling: 'UI & Styling',
 				productivity: 'Productividad & DX',
-				design: 'Diseño & UX/UI'
+				design: 'Design Foundations'
 			}
 		},
 			about: {
@@ -54,7 +54,7 @@ const es = {
 					title: 'Frontend Lead',
 					duration: 'Actualmente - desde enero de 2025',
 					company: 'Inditex (a través de Kelea)',
-					text: 'Lidero la arquitectura frontend en plataformas enterprise globales, tomando decisiones estructurales y definiendo estándares compartidos entre equipos. Me mantengo implicado a nivel técnico cuando es necesario, trabajando en contextos multiequipo y asegurando que los sistemas frontend compartidos escalen correctamente en rendimiento, mantenibilidad y experiencia de desarrollo.'
+					text: 'Lidero la arquitectura frontend en plataformas enterprise globales, con foco en sistemas compartidos, decisiones estructurales y estándares que permiten a los equipos escalar sin perder calidad ni claridad. Me mantengo implicado a nivel técnico cuando es necesario, trabajando en contextos multiequipo y asegurando que los sistemas frontend escalen correctamente en rendimiento, mantenibilidad y experiencia de desarrollo.'
 				},
 				fxstreet: {
 					title: 'Frontend Lead',
@@ -115,7 +115,7 @@ const es = {
 			contact: {
 				title: 'Ponte en contacto',
 				description:
-					'¿Qué sigue? No dudes en contactarme si estás buscando un desarrollador, tienes alguna pregunta o simplemente quieres conectar.',
+					'¿Qué sigue? No dudes en contactarme si buscas un Frontend Architect o Tech Lead, tienes alguna pregunta o simplemente quieres conectar.',
 				name: 'Nombre',
 				email: 'Correo electrónico',
 				phone: 'Teléfono',

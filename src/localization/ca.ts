@@ -32,18 +32,18 @@ const ca = {
 			header: {
 				title: 'Hola, sóc Fer Bendala 👋',
 				subtitle: 'Frontend Architect · Tech Lead · Design Systems',
-				text: "Construeixo plataformes frontend que escalen entre equips, amb focus en arquitectura, sistemes de disseny, rendiment i experiència de desenvolupament. El meu perfil es mou entre l'enginyeria i el disseny UX/UI: he liderat sistemes compartits, llançat productes des de zero i definit estàndards que permeten entregar ràpid sense perdre qualitat.",
+				text: "Construeixo plataformes frontend que escalen entre equips, amb focus en arquitectura, sistemes de disseny i mantenibilitat a llarg termini. El meu perfil es mou entre l'enginyeria i el disseny UX/UI: he liderat sistemes compartits, llançat productes des de zero i definit estàndards que permeten entregar ràpid sense perdre qualitat.",
 				country: 'Barcelona, Espanya',
-				status: 'Disponible per a nous projectes'
+				status: 'Disponible per a rols de Frontend Architect / Tech Lead'
 			},
 			skills: {
 				title: 'Habilitats',
-				description: "Les habilitats, eines i tecnologies que m'encanten",
+				description: 'Skills i sistemes amb els que treballo',
 				categories: {
 					architecture: 'Arquitectura & Sistemes Frontend',
 					styling: 'UI & Styling',
 					productivity: 'Productivitat & DX',
-					design: 'Disseny & UX/UI'
+					design: 'Design Foundations'
 				}
 			},
 			about: {
@@ -54,7 +54,7 @@ const ca = {
 					title: 'Frontend Lead',
 					duration: 'Actualment - des de gener de 2025',
 					company: 'Inditex (a través de Kelea)',
-					text: "Lidero l'arquitectura frontend en plataformes enterprise globals, prenent decisions estructurals i definint estàndards compartits entre equips. Em mantinc implicat a nivell tècnic quan és necessari, treballant en contextos multiequip i assegurant que els sistemes frontend compartits escalin correctament en rendiment, mantenibilitat i experiència de desenvolupament."
+					text: "Lidero l'arquitectura frontend en plataformes enterprise globals, amb focus en sistemes compartits, decisions estructurals i estàndards que permeten als equips escalar sense perdre qualitat ni claredat. Em mantinc implicat a nivell tècnic quan és necessari, treballant en contextos multiequip i assegurant que els sistemes frontend escalin correctament en rendiment, mantenibilitat i experiència de desenvolupament."
 				},
 				fxstreet: {
 					title: 'Frontend Lead',
@@ -116,7 +116,7 @@ const ca = {
 			contact: {
 				title: 'Posa’t en contacte',
 				description:
-					'Què segueix? No dubtis a contactar-me si estàs buscant un desenvolupador, tens alguna pregunta o simplement vols connectar.',
+					'Què segueix? No dubtis a contactar-me si busques un Frontend Architect o Tech Lead, tens alguna pregunta o simplement vols connectar.',
 				name: 'Nom',
 				email: 'Correu electrònic',
 				phone: 'Telèfon',
