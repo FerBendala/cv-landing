@@ -1,0 +1,6 @@
+# robots.txt for ferbendala.dev
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ferbendala.dev/sitemap.xml

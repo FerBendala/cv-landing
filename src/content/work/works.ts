@@ -1,8 +1,8 @@
-import fxs_app from '@image/webp/fxs-app.png';
-import fxs_landing from '@image/webp/fxs-landing.png';
-import fxs_web from '@image/webp/fxs-web.png';
-import shopfully_website from '@image/webp/shopfully-website.png';
-import tiendeo_web from '@image/webp/tiendeo-web.png';
+import fxs_app from '@image/webp/fxs-app.webp';
+import fxs_landing from '@image/webp/fxs-landing.webp';
+import fxs_web from '@image/webp/fxs-web.webp';
+import shopfully_website from '@image/webp/shopfully-website.webp';
+import tiendeo_web from '@image/webp/tiendeo-web.webp';
 
 const works = [
 	{
